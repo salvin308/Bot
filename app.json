@@ -18,7 +18,7 @@
     ],
     "website": "https://github.com/salvin308/bot",
     "repository": "https://github.com/salvin308/bot",
-    "UPSTREAM _REPO": 
+    "UPSTREAM _REPO": "https://github.com/salvin308/bot",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
