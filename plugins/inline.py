@@ -17,7 +17,7 @@ async def answer(bot, query):
     if AUTH_CHANNEL and not await is_subscribed(bot, query):
         await query.answer(results=[],
                            cache_time=0,
-                           switch_pm_text='You have to subscribe my channel to use the bot',
+                           switch_pm_text='You have to subscribe my channel to use me ☺',
                            switch_pm_parameter="subscribe")
         return
 
@@ -93,7 +93,7 @@ def get_reply_markup(query):
         [
             InlineKeyboardButton('♻️ 𝗦𝗲𝗮𝗿𝗰𝗵 𝗔𝗴𝗮𝗶𝗻 ♻️', switch_inline_query_current_chat=query)
         ],[
-            InlineKeyboardButton('♥️ 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 ♥️', url='https://t.me/+veUIdIW2CQ5mOGU5')
+            InlineKeyboardButton('📢 OTT Channel 📢', url='https://t.me/SS_OTT_Releases')
         ]
         ]
     return InlineKeyboardMarkup(buttons)
