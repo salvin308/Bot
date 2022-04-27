@@ -94,7 +94,7 @@ This module only works for my OᗯᑎEᖇ⚡
 ✮ FREE STORAGE: <code>{}</code> 𝙼𝚒𝙱"""
     LOG_TEXT_G = """#𝐍𝐞𝐰𝐆𝐫𝐨𝐮𝐩
 ✮ Group ›› {}(<code>{}</code>)
-✮ NAME ›› {}
+✮ NAME ›› {GROUPNAME}
 ✮ Total Members ›› <code>{}</code>
 ✮ Added By ›› {}
 """
