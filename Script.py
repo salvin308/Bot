@@ -4,14 +4,14 @@ MY NAME IS <a href=https://t.me/{}>{}</a>, I AM WORK FOR @movieclub308 . MANAGED
     HELP_TXT = """𝙷𝙴𝚈 {}
 HERE IS THE HELP FOR MY COMMANDS."""
     ABOUT_TXT = """✮ MY NAME: {}
-✮ CREATOR: <a href=https://t.me/BKC0001>𝙰𝙰𝙳𝙷𝙸</a>
+✮ CREATOR: <a href=https://t.me/salvinsebastian308>SALVIN</a>
 ✮ LIBRARY: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
 ✮ LANGUAGE: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
 ✮ DATA BASE: 𝙼𝙾𝙽𝙶𝙾 𝙳𝙱
 ✮ BOT SERVER: 𝙷𝙴𝚁𝙾𝙺𝚄
 
-<b>💞 SALVIN 💞:</b>
-- <a href=https://t.me/salvinsebastian308>Salvin</a>"""
+<b>💞 SUPPORT 💞:</b>
+- <a href=https://t.me/SS_Admin_Chat_bot>SS Admin Chat Bot</a>"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
 - Filter is the feature were users can set automated replies for a particular keyword and ᗩᒍᗩ᙭ will respond whenever a keyword is found the message
@@ -87,13 +87,14 @@ This module only works for my OᗯᑎEᖇ⚡
 ➾ /unban  - <code>to unban a user.</code>
 ➾ /channel - <code>to get list of total connected channels</code>
 ➾ /broadcast - <code>to broadcast a message to all users</code>"""
-    STATUS_TXT = """✮ 𝚃𝙾𝚃𝙰𝙻 𝙵𝙸𝙻𝙴𝚂: <code>{}</code>
+    STATUS_TXT = """✮ TOTAL FILES: <code>{}</code>
 ✮ TOTAL USERS: <code>{}</code>
 ✮ TOTAL CHATS: <code>{}</code>
 ✮ USED STORAGE: <code>{}</code> 𝙼𝚒𝙱
 ✮ FREE STORAGE: <code>{}</code> 𝙼𝚒𝙱"""
     LOG_TEXT_G = """#𝐍𝐞𝐰𝐆𝐫𝐨𝐮𝐩
 ✮ Group ›› {}(<code>{}</code>)
+✮ NAME ›› {}
 ✮ Total Members ›› <code>{}</code>
 ✮ Added By ›› {}
 """
