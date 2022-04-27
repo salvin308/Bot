@@ -5,12 +5,12 @@ MY NAME IS <a href=https://t.me/{}>{}</a>, I AM WORK FOR @movieclub308 . MANAGED
 HERE IS THE HELP FOR MY COMMANDS."""
     ABOUT_TXT = """✮ MY NAME: {}
 ✮ CREATOR: <a href=https://t.me/salvinsebastian308>SALVIN</a>
-✮ LIBRARY: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
-✮ LANGUAGE: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
-✮ DATA BASE: 𝙼𝙾𝙽𝙶𝙾 𝙳𝙱
-✮ BOT SERVER: 𝙷𝙴𝚁𝙾𝙺𝚄
+✮ LIBRARY: PYROGRAM
+✮ LANGUAGE: PYTHON 3
+✮ DATA BASE: MONGO DB
+✮ BOT SERVER: HEROKU
 
-<b>💞 SUPPORT 💞:</b>
+<b>SUPPORT:</b>
 - <a href=https://t.me/SS_Admin_Chat_bot>SS Admin Chat Bot</a>"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
@@ -73,7 +73,7 @@ These are the extra features of ᗩᒍᗩ᙭
     ADMIN_TXT = """Help: <b>Admin mods</b>
 
 <b>NOTE:</b>
-This module only works for my OᗯᑎEᖇ⚡
+This module only works for my OWNER⚡
 
 <b>Commands and Usage:</b>
 ➾ /logs - <code>to get the rescent errors</code>
@@ -93,13 +93,12 @@ This module only works for my OᗯᑎEᖇ⚡
 ✮ TOTAL CHATS: <code>{}</code>
 ✮ USED STORAGE: <code>{}</code> 𝙼𝚒𝙱
 ✮ FREE STORAGE: <code>{}</code> 𝙼𝚒𝙱"""
-    LOG_TEXT_G = """#𝐍𝐞𝐰𝐆𝐫𝐨𝐮𝐩
+    LOG_TEXT_G = """#NewGroup
 ✮ Group ›› {}(<code>{}</code>)
-✮ NAME ›› {GROUPNAME}
 ✮ Total Members ›› <code>{}</code>
 ✮ Added By ›› {}
 """
-    LOG_TEXT_P = """#𝐍𝐞𝐰𝐔𝐬𝐞𝐫
+    LOG_TEXT_P = """#NewUser
 ✮ ID ›› <code>{}</code>
 ✮ NAME ›› {}
 ✮ {Mention}
