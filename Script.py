@@ -101,5 +101,4 @@ This module only works for my OWNER⚡
     LOG_TEXT_P = """#NewUser
 ✮ ID ›› <code>{}</code>
 ✮ NAME ›› {}
-✮ {Mention}
 """
