@@ -86,7 +86,8 @@ This module only works for my OᗯᑎEᖇ⚡
 ➾ /ban  - <code>to ban a user.</code>
 ➾ /unban  - <code>to unban a user.</code>
 ➾ /channel - <code>to get list of total connected channels</code>
-➾ /broadcast - <code>to broadcast a message to all users</code>"""
+➾ /broadcast - <code>to broadcast a message to all users</code>
+➾ /setttings - <code>to open the settings in PM</code>"""
     STATUS_TXT = """✮ TOTAL FILES: <code>{}</code>
 ✮ TOTAL USERS: <code>{}</code>
 ✮ TOTAL CHATS: <code>{}</code>
