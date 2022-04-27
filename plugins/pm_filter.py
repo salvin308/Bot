@@ -708,7 +708,7 @@ async def advantage_spell_chok(msg):
                 )
             ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-     await msg.reply("<code>Please Check the Spelling of the movie from the below Table 👇🏻👇🏻</code>", reply_markup=InlineKeyboardMarkup(btn))
+     await msg.reply("<code>Please Check the Spelling of the movie from the below Table</code> 👇🏻👇🏻", reply_markup=InlineKeyboardMarkup(btn))
     
 
 async def manual_filters(client, message, text=False):
