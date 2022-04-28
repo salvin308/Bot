@@ -661,15 +661,7 @@ async def auto_filter(client, msg, spoll=False):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
             hmm = await message.reply_photo(photo=poster, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio          
-        except Exception as e:
-            logger.exception(e)
-            fek = await message.reply_text(text=cap, disable_web_page_preview=False, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio         
-    else:
-        fuk = await message.reply_text(text=cap, disable_web_page_preview=False, reply_markup=InlineKeyboardMarkup(btn))
-        await asyncio
-        await fuk.delete()
+            await asyncio
         
 
 async def advantage_spell_chok(msg):
