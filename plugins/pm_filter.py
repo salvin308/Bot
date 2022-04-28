@@ -123,8 +123,9 @@ async def advantage_spoll_choker(bot, query):
         if files:
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
-        else:
+         else:
             k = await query.message.edit('This Movie is not Released or yet added. Please Send message to my admin. Please Start this bot and send message to this bot. Bot Link: @SS_Admin_Chat_bot')
+            await asyncio.sleep(1000000000000000000000000000000000)
             await k.delete()
 
 
