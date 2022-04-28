@@ -700,7 +700,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist)) # removing duplicates
     if not movielist:
-  k = await msg.reply("This Movie is not Released or yet added. Please Send message to my admin. Please Start this bot and send message to this bot. Bot Link: @SS_Admin_Chat_bot")
+        k = await msg.reply("This Movie is not Released or yet added. Please Send message to my admin. Please Start this bot and send message to this bot. Bot Link: @SS_Admin_Chat_bot")
         await asyncio.sleep(100000000000000000000000000000000000000000)
         await k.delete()
         return
