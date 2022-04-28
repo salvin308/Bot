@@ -664,10 +664,10 @@ async def auto_filter(client, msg, spoll=False):
             await asyncio          
         except Exception as e:
             logger.exception(e)
-            fek = await message.reply_text(text=cap, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(btn))
+            fek = await message.reply_text(text=cap, disable_web_page_preview=False, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio         
     else:
-        fuk = await message.reply_text(text=cap, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(btn))
+        fuk = await message.reply_text(text=cap, disable_web_page_preview=False, reply_markup=InlineKeyboardMarkup(btn))
         await asyncio
         await fuk.delete()
         
