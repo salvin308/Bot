@@ -93,12 +93,12 @@ This module only works for my OWNER⚡
 ✮ TOTAL CHATS: <code>{}</code>
 ✮ USED STORAGE: <code>{}</code> 𝙼𝚒𝙱
 ✮ FREE STORAGE: <code>{}</code> 𝙼𝚒𝙱"""
-     LOG_TEXT_G = """#𝐍𝐞𝐰𝐆𝐫𝐨𝐮𝐩
+    LOG_TEXT_G = """#NewGroup
 ✮ GROUP ›› {}(<code>{}</code>)
 ✮ TOTAL MEMBERS ›› <code>{}</code>
 ✮ ADDED BY ›› {}
 """
-    LOG_TEXT_P = """#𝐍𝐞𝐰𝐔𝐬𝐞𝐫
+    LOG_TEXT_P = """#New User
 ✮ ID ›› <code>{}</code>
 ✮ NAME ›› {}
 """
