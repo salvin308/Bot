@@ -14,7 +14,7 @@ HERE IS THE HELP FOR MY COMMANDS."""
 - <a href=https://t.me/SS_Admin_Chat_bot>SS Admin Chat Bot</a>"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
-- Filter is the feature were users can set automated replies for a particular keyword and ᗩᒍᗩ᙭ will respond whenever a keyword is found the message
+- Filter is the feature were users can set automated replies for a particular keyword and SANTO will respond whenever a keyword is found the message
 
 <b>NOTE:</b>
 1. bot should have admin privillage.
@@ -63,7 +63,7 @@ HERE IS THE HELP FOR MY COMMANDS."""
     EXTRAMOD_TXT = """Help: <b>Extra Modules</b>
 
 <b>NOTE:</b>
-These are the extra features of ᗩᒍᗩ᙭
+These are the extra features of SANTO
 
 <b>Commands and Usage:</b>
 ➾ /id - <code>get id of a specifed user.</code>
@@ -93,12 +93,16 @@ This module only works for my OWNER⚡
 ✮ TOTAL CHATS: <code>{}</code>
 ✮ USED STORAGE: <code>{}</code> 𝙼𝚒𝙱
 ✮ FREE STORAGE: <code>{}</code> 𝙼𝚒𝙱"""
-    LOG_TEXT_G = """#NewGroup
-✮ Group ›› {}(<code>{}</code>)
-✮ Total Members ›› <code>{}</code>
-✮ Added By ›› {}
+     LOG_TEXT_G = """#𝐍𝐞𝐰𝐆𝐫𝐨𝐮𝐩
+✮ GROUP ›› {}(<code>{}</code>)
+✮ TOTAL MEMBERS ›› <code>{}</code>
+✮ ADDED BY ›› {}
 """
-    LOG_TEXT_P = """#NewUser
+    LOG_TEXT_P = """#𝐍𝐞𝐰𝐔𝐬𝐞𝐫
 ✮ ID ›› <code>{}</code>
 ✮ NAME ›› {}
 """
+    CARBON_TXT = """ <b>CARBON MODULE</b>
+<b>YOU CAN BEAUTIFY YOUR CODES BY USING THE FEATURE..............</b>
+<b>COMMAND.!</b>
+<b>/carbon ›› REPLY TO ANY TEXT MESSAGE</b>
