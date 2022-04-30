@@ -106,3 +106,6 @@ This module only works for my OWNER⚡
 <b>YOU CAN BEAUTIFY YOUR CODES BY USING THE FEATURE..............</b>
 <b>COMMAND.!</b>
 <b>/carbon ›› REPLY TO ANY TEXT MESSAGE</b>
+
+<b>WORK ON BOTH GROUP AND PM</b>
+<b>CREDITS ››</b> <a href=https://t.me/movieclub308>👥 SS Movie Club 👥</a></b>"""
