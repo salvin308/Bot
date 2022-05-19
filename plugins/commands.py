@@ -21,7 +21,7 @@ async def start(client, message):
                 InlineKeyboardButton('Support', url='https://t.me/SS_Admin_Chat_bot')
             ],
             [
-                InlineKeyboardButton('♻️ HΞLᎮ ♻️', url=f"https://t.me/{temp.U_NAME}?start=help")
+                InlineKeyboardButton('HΞLᎮ', url=f"https://t.me/{temp.U_NAME}?start=help")
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -39,11 +39,11 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('+ Add Me To Group +', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('📢 OTT Channel 📢', url='https://t.me/SS_OTT_Releases'),
+            InlineKeyboardButton('📢 OTT Channel 📢', url='https://t.me/SS_OTT_Movie_Releases'),
             InlineKeyboardButton('📽 Theater Print Channel 📽', url='https://t.me/+mBEx026EYkxhYjU1')
             ],[
-            InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
-            InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
+            InlineKeyboardButton('HΞLᎮ', callback_data='help'),
+            InlineKeyboardButton('ΛBOUT', callback_data='about')
             ],[
             InlineKeyboardButton('Movie Search Group', url='https://t.me/movieclub308')
         ]]
@@ -85,8 +85,8 @@ async def start(client, message):
             InlineKeyboardButton('📢 OTT Channel 📢', url='https://t.me/SS_OTT_Releases'),
             InlineKeyboardButton('📽 Theater Print Channel 📽', url='https://t.me/+mBEx026EYkxhYjU1')
             ],[
-            InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
-            InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
+            InlineKeyboardButton('HΞLᎮ', callback_data='help'),
+            InlineKeyboardButton('ΛBOUT', callback_data='about')
             ],[
             InlineKeyboardButton('Movie Search Group', url='https://t.me/movieclub308')
         ]]
