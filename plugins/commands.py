@@ -45,7 +45,7 @@ async def start(client, message):
             InlineKeyboardButton('HΞLᎮ', callback_data='help'),
             InlineKeyboardButton('ΛBOUT', callback_data='about')
             ],[
-            InlineKeyboardButton('Movie Search Group', url='https://t.me/movieclub308')
+            InlineKeyboardButton('👥 Movie Search Group 👥', url='https://t.me/movieclub308')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -88,7 +88,7 @@ async def start(client, message):
             InlineKeyboardButton('HΞLᎮ', callback_data='help'),
             InlineKeyboardButton('ΛBOUT', callback_data='about')
             ],[
-            InlineKeyboardButton('Movie Search Group', url='https://t.me/movieclub308')
+            InlineKeyboardButton('👥 Movie Search Group 👥', url='https://t.me/movieclub308')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
