@@ -8,8 +8,6 @@ from utils import get_size, temp
 from Script import script
 from pyrogram.errors import ChatAdminRequired
 
-"""-----------------------------------------https://t.me/GetTGLink/4179 --------------------------------------"""
-
 @Client.on_message(filters.new_chat_members & filters.group)
 async def save_group(bot, message):
     r_j_check = [u.id for u in message.new_chat_members]
@@ -22,11 +20,11 @@ async def save_group(bot, message):
         if message.chat.id in temp.BANNED_CHATS:
             # Inspired from a boat of a banana tree
             buttons = [[
-                InlineKeyboardButton('𝗢𝗪𝗡𝗘𝗥', url=f'https://t.me/{SUPPORT_CHAT}')
+                InlineKeyboardButton('SUPPORT', url=f'https://t.me/{SUPPORT_CHAT}')
             ]]
             reply_markup=InlineKeyboardMarkup(buttons)
             k = await message.reply(
-                text='<b>CHAT NOT ALLOWED 🐞\n\𝚗𝙼𝚈 𝙰𝙳𝙼𝙸𝙽𝚂 𝙷𝙰𝚂 𝚁𝙴𝚂𝚃𝚁𝙸𝙲𝚃𝙴𝙳 𝙼𝙴 𝙵𝚁𝙾𝙼 𝚆𝙾𝚁𝙺𝙸𝙽𝙶 𝙷𝙴𝚁𝙴 !𝙸𝙵 𝚈𝙾𝚄 𝚆𝙰𝙽𝚃 𝚃𝙾 𝙺𝙽𝙾𝚆 𝙼𝙾𝚁𝙴 𝙰𝙱𝙾𝚄𝚃 𝙸𝚃 𝙲𝙾𝙽𝚃𝙰𝙲𝚃 𝙾𝚆𝙽𝙴𝚁..</b>',
+                text='<b>THIS GROUP IS NOT ALLOWED 🐞\n\nMY ADMIN HAS RESTRICTED ME FROM WORKING HERE !IF YOU WANT TO KNOW MORE ABOUT IT CONTACT OWNER...</b>',
                 reply_markup=reply_markup,
             )
 
@@ -38,15 +36,12 @@ async def save_group(bot, message):
             return
         buttons = [
             [
-                InlineKeyboardButton('⚡ HΞLᎮ ⚡', url=f"https://t.me/{temp.U_NAME}?start=help")
-            ],
-            [
-                InlineKeyboardButton('Support', url='https://t.me/SS_Admin_Chat_bot')
+                InlineKeyboardButton('HOW TO USE ME', url=f"https://t.me/{temp.U_NAME}?start=help")
             ]
             ]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
-            text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\nIf You Have Any Questions & Doubts About Using Me Contact Owner ›› @BKC0001.</b>",
+            text=f"<b>›› THANKS TO ADD ME TO YOUR GROUP..\n›› DON'T FORGET TO MAKE ME AS ADMIN IN THIS GROUP.\n›› IS ANY DOUBTS ABOUT USING ME CLICK BELOW BUTTON..⚡⚡.</b>",
             reply_markup=reply_markup)
     else:
         for u in message.new_chat_members:
@@ -55,13 +50,14 @@ async def save_group(bot, message):
                     await (temp.MELCOW['welcome']).delete()
                 except:
                     pass
-            temp.MELCOW['welcome'] = await message.reply(f"<b>𝙷𝙴𝚈 {u.mention}⚡ 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 {message.chat.title}!</b>")
+            temp.MELCOW['welcome'] = await message.reply(f"<b>Hey ♥️ {u.mention}, Welcome to {message.chat.title}...</b>")
 
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
+    await message.reply_chat_action("typing")
     if len(message.command) == 1:
-        return await message.reply('Give 𝚖𝚎 𝚊 𝚌𝚑𝚊𝚝 id')
+        return await message.reply('Give me a chat id')
     chat = message.command[1]
     try:
         chat = int(chat)
@@ -69,7 +65,7 @@ async def leave_a_chat(bot, message):
         chat = chat
     try:
         buttons = [[
-            InlineKeyboardButton('𝗢𝗪𝗡𝗘𝗥', url=f'https://t.me/{SUPPORT_CHAT}')
+            InlineKeyboardButton('SUPPORT', url=f'https://t.me/{SUPPORT_CHAT}')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
@@ -84,6 +80,7 @@ async def leave_a_chat(bot, message):
 
 @Client.on_message(filters.command('disable') & filters.user(ADMINS))
 async def disable_chat(bot, message):
+    await message.reply_chat_action("typing")
     if len(message.command) == 1:
         return await message.reply('Give me a chat id')
     r = message.text.split(None)
@@ -107,7 +104,7 @@ async def disable_chat(bot, message):
     await message.reply('Chat Succesfully Disabled')
     try:
         buttons = [[
-            InlineKeyboardButton('𝗢𝗪𝗡𝗘𝗥', url=f'https://t.me/{SUPPORT_CHAT}')
+            InlineKeyboardButton('SUPPORT', url=f'https://t.me/{SUPPORT_CHAT}')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
@@ -121,6 +118,7 @@ async def disable_chat(bot, message):
 
 @Client.on_message(filters.command('enable') & filters.user(ADMINS))
 async def re_enable_chat(bot, message):
+    await message.reply_chat_action("typing")
     if len(message.command) == 1:
         return await message.reply('Give me a chat id')
     chat = message.command[1]
@@ -140,7 +138,8 @@ async def re_enable_chat(bot, message):
 
 @Client.on_message(filters.command('stats') & filters.incoming)
 async def get_ststs(bot, message):
-    rju = await message.reply('Fetching stats..')
+    await message.reply_chat_action("typing")
+    rju = await message.reply('<b>Accesing Storage...</b>')
     total_users = await db.total_users_count()
     totl_chats = await db.total_chat_count()
     files = await Media.count_documents()
@@ -170,8 +169,9 @@ async def gen_invite(bot, message):
         return await message.reply(f'Error {e}')
     await message.reply(f'Here is your Invite Link {link.invite_link}')
 
-@Client.on_message(filters.command('ban') & filters.user(ADMINS))
+@Client.on_message(filters.command('ban_user') & filters.user(ADMINS))
 async def ban_a_user(bot, message):
+    await message.reply_chat_action("typing")
     # https://t.me/GetTGLink/4185
     if len(message.command) == 1:
         return await message.reply('Give me a user id / username')
@@ -204,8 +204,9 @@ async def ban_a_user(bot, message):
 
 
     
-@Client.on_message(filters.command('unban') & filters.user(ADMINS))
+@Client.on_message(filters.command('unban_user') & filters.user(ADMINS))
 async def unban_a_user(bot, message):
+    await message.reply_chat_action("typing")
     if len(message.command) == 1:
         return await message.reply('Give me a user id / username')
     r = message.text.split(None)
@@ -239,6 +240,7 @@ async def unban_a_user(bot, message):
     
 @Client.on_message(filters.command('users') & filters.user(ADMINS))
 async def list_users(bot, message):
+    await message.reply_chat_action("typing")
     # https://t.me/GetTGLink/4184
     raju = await message.reply('Getting List Of Users')
     users = await db.get_all_users()
@@ -254,6 +256,7 @@ async def list_users(bot, message):
 
 @Client.on_message(filters.command('chats') & filters.user(ADMINS))
 async def list_chats(bot, message):
+    await message.reply_chat_action("typing")
     raju = await message.reply('Getting List Of chats')
     chats = await db.get_all_chats()
     out = "Chats Saved In DB Are:\n\n"
