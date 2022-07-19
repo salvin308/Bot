@@ -12,9 +12,21 @@ from database.connections_mdb import active_connection
 from utils import get_file_id, parser, split_quotes
 from info import ADMINS
 
+@Client.on_message(filters.regex("movie") | filters.regex("Movie") | filters.regex("MOVIE"))
+async def regex(client, message):
+    await message.reply_text("""‼️‼️INSTRUCTIONS‼️‼️
+ℹ️ MOVIE REQUESTS IN THIS FORMATS ℹ️ 👇🏻
+<b>Pushpa ✅
+Pushpa 2021 ✅
+Pushpa Malayalam ✅</b>
+~~Pushpa Movie Link Undo ❌
+Pushpa File Send  ❌
+Pushpa Movie  ❌
+Pushpa Undo  ❌~~""")
 
 @Client.on_message(filters.command(['filter', 'add']) & filters.incoming)
 async def addfilter(client, message):
+    await message.reply_chat_action("typing")
     userid = message.from_user.id if message.from_user else None
     if not userid:
         return await message.reply(f"You are anonymous admin. Use /connect {message.chat.id} in PM")
@@ -118,6 +130,7 @@ async def addfilter(client, message):
 
 @Client.on_message(filters.command(['viewfilters', 'filters']) & filters.incoming)
 async def get_all(client, message):
+    await message.reply_chat_action("typing")
     
     chat_type = message.chat.type
     userid = message.from_user.id if message.from_user else None
@@ -182,6 +195,7 @@ async def get_all(client, message):
         
 @Client.on_message(filters.command('del') & filters.incoming)
 async def deletefilter(client, message):
+    await message.reply_chat_action("typing")
     userid = message.from_user.id if message.from_user else None
     if not userid:
         return await message.reply(f"You are anonymous admin. Use /connect {message.chat.id} in PM")
@@ -233,6 +247,7 @@ async def deletefilter(client, message):
 
 @Client.on_message(filters.command('delall') & filters.incoming)
 async def delallconfirm(client, message):
+    await message.reply_chat_action("typing")
     userid = message.from_user.id if message.from_user else None
     if not userid:
         return await message.reply(f"You are anonymous admin. Use /connect {message.chat.id} in PM")
@@ -269,4 +284,3 @@ async def delallconfirm(client, message):
             ]),
             quote=True
         )
-
