@@ -750,11 +750,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('+ Add Me To Group +', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ Add Me To Group ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('⚠ HΞLᎮ ⚠', callback_data='help_1'),
-            InlineKeyboardButton('CONTACT ME', url='https://t.me/SS_ADMIN_308_bot'),
-            InlineKeyboardButton('👨🏼‍💻 ΛBOUT 👨🏼‍💻', callback_data='about')
+            InlineKeyboardButton('👨🏼‍💻 CONTACT DEV 👨🏼‍💻', url='https://t.me/SS_ADMIN_308_bot'),
+            InlineKeyboardButton('💥 ΛBOUT 💥', callback_data='about')
             ],[
             InlineKeyboardButton('👥 Movie Search Group 👥', url='https://t.me/SS_Movie_Club')
         ]]
@@ -840,8 +840,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('PASTE', callback_data='pastes'),
             InlineKeyboardButton("IMAGE", callback_data='image')
             ],[
-            InlineKeyboardButton("⏭ NEXT ⏭", callback_data='help_2'),
-            InlineKeyboardButton('🏡 HOME 🏡', callback_data='start')
+            InlineKeyboardButton('🏡 HOME 🏡', callback_data='start'),
+            InlineKeyboardButton("⏭ NEXT ⏭", callback_data='help_2')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
