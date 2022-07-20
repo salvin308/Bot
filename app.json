@@ -1,7 +1,7 @@
 {
-    "name": "bot",
+    "name": "SPIDEY",
     "description": "This Bot Will Help You To Store Files In Cloud Storage. You Can Add Files To The Bot By Forward the last file from a public channel to your bot and Press Yes Button.. If The Files Channl Is Private Make the bot admin on the channel and forward the last file to bot. Then Add the bot to you group and send the movie name The Bot Will Give the file in Bot PM..✮✮",
-    "logo": "https://telegra.ph/file/96857d5ddf6643647a3d1.jpg",
+    "logo": "https://telegra.ph/file/6780f1e2706d1f9b78e5b.jpg",
     "stack": "container",
     "keywords": [
       "telegram",
@@ -16,9 +16,8 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/salvin308/bot",
+    "website": "https://github.com/SALVIN308",
     "repository": "https://github.com/salvin308/bot",
-    "UPSTREAM_REPO": "https://github.com/salvin308/bot",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
@@ -42,27 +41,23 @@
         },
         "PICS": {
             "description": "Add some telegraph link of pictures .",
-            "required": false
+            "required": true
         },
         "LOG_CHANNEL": {
             "description": "Bot Logs,Give a channel id with -100xxxxxxx",
-            "required": true
+            "required": true       
         },
         "INDEX_REQ_CHANNEL": {
             "description": "Same Logs channel id with -100xxxxxxx",
-            "required": true
-        },
-        "SUPPORT_CHAT": {
-            "description": "Username of a Support Group / ADMIN. ( Should be username without @ and not ID)",
-            "required": false
-        },
+            "required": true       
+        },       
         "AUTH_USERS": {
             "description": "Username or ID of users to give access of inline search. Separate multiple users by space.\nLeave it empty if you don't want to restrict bot usage.",
             "required": false
         },
         "AUTH_CHANNEL": {
             "description": "ID of channel.Make sure bot is admin in this channel. Without subscribing this channel users cannot use bot.",
-            "required": false
+            "required": true
         },   
         "USE_CAPTION_FILTER": {
             "description": "Whether bot should use captions to improve search results. (True False)",
@@ -70,7 +65,7 @@
         },
         "CUSTOM_FILE_CAPTION": {
             "description": "A custom file caption for your files. formatable with , file_name, file_caption, file_size, Read Readme.md for better understanding.",
-            "required": false
+            "required": true
         },
         "DATABASE_URI": {
             "description": "mongoDB URI.",
@@ -82,24 +77,35 @@
         },
         "COLLECTION_NAME": {
             "description": "Name of the collections. Defaults to Telegram_files. If you are using the same database, then use different collection name for each bot",
-            "value": "Ajax_Files",
+            "value": "Telegram_Files",
             "required": false
         },
         "CACHE_TIME": {
             "description": "The maximum amount of time in seconds that the result of the inline query may be cached on the server",
-            "value": "300",
+            "value": "0",
+            "required": false
+        },
+        "SUPPORT_CHAT": {
+            "description": "Updated Channel Username Without @ Not Chanel ID",
+            "value": "SS_Admin_Chat_bot",
             "required": false
         },
         "IMDB": {
-            "description": "Imdb, the view of information when making True/False ",
-            "required": false
+            "description": "Imdb, the view of information when making True/False",
+            "required": false     
+        },
+        "IMDB_TEMPLATE": {
+            "description": "Custom IMDB Template",        
+            "required": true  
         },
         "SINGLE_BUTTON": {
             "description": "choose b/w single or double buttons https://github.com/Aadhi000/Ajax/issues/22",
+            "value": "True",
             "required": false
         },
         "P_TTI_SHOW_OFF": {
             "description": "Customize Result Buttons to Callback or Url by (True = url / False = callback)",
+            "value": "True",
             "required": false
         }
     },
