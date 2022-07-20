@@ -43,7 +43,7 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('+ Add Me To Group +', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('⚠ HΞLᎮ ⚠', callback_data='help'),
+            InlineKeyboardButton('⚠ HΞLᎮ ⚠', callback_data='help1'),
             InlineKeyboardButton('CONTACT ME', url='https://t.me/SS_ADMIN_308_bot'),
             InlineKeyboardButton('👨🏼‍💻 ΛBOUT 👨🏼‍💻', callback_data='about')
             ],[
@@ -84,7 +84,7 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('+ Add Me To Group +', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('⚠ HΞLᎮ ⚠', callback_data='help'),
+            InlineKeyboardButton('⚠ HΞLᎮ ⚠', callback_data='help1'),
             InlineKeyboardButton('CONTACT ME', url='https://t.me/SS_ADMIN_308_bot'),
             InlineKeyboardButton('👨🏼‍💻 ΛBOUT 👨🏼‍💻', callback_data='about')
             ],[
