@@ -812,7 +812,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("⏭ NEXT ⏭", callback_data='help2'),
             InlineKeyboardButton('🏡 HOME 🏡', callback_data='start')
         ]]
-    elif query.data == "help2":
+    elif query.data == "help_2":
         buttons = [[
             InlineKeyboardButton('FUN', callback_data='fun'), 
             InlineKeyboardButton('JSONE', callback_data='son'),
@@ -827,9 +827,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('KICK', callback_data='zombies')
             ],[
             InlineKeyboardButton("🔙", callback_data='help'),
-            InlineKeyboardButton("⏭", callback_data='help3')
+            InlineKeyboardButton("⏭", callback_data='help_3')
         ]]
-    elif query.data == "help3":
+    elif query.data == "help_3":
         buttons = [[
             InlineKeyboardButton('REPORT', callback_data='report'),
             InlineKeyboardButton('YT-THUMB', callback_data='ytthumb'),
@@ -843,7 +843,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('FILE-STORE', callback_data='newdata'),
             InlineKeyboardButton('STATUS', callback_data='stats')
             ],[
-            InlineKeyboardButton("🔙", callback_data='help3'),
+            InlineKeyboardButton("🔙", callback_data='help_3'),
             InlineKeyboardButton('🏡 HOME 🏡', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -852,7 +852,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-    elif query.data == "help4":
+    elif query.data == "help_4":
         buttons = [[
             InlineKeyboardButton('MANUAL FILTER', callback_data='manuelfilter'),
             InlineKeyboardButton('AUTO FILTER', callback_data='autofilter'),
@@ -866,10 +866,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('PASTE', callback_data='pastes'),
             InlineKeyboardButton("IMAGE", callback_data='image')
             ],[
-            InlineKeyboardButton("⏭ NEXT ⏭", callback_data='help5'),
+            InlineKeyboardButton("⏭ NEXT ⏭", callback_data='help_5'),
             InlineKeyboardButton('🏡 HOME 🏡', callback_data='start')
         ]]
-    elif query.data == "help5":
+    elif query.data == "help_5":
         buttons = [[
             InlineKeyboardButton('FUN', callback_data='fun'), 
             InlineKeyboardButton('JSONE', callback_data='son'),
@@ -883,10 +883,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('MUTE', callback_data='restric'),
             InlineKeyboardButton('KICK', callback_data='zombies')
             ],[
-            InlineKeyboardButton("🔙", callback_data='help4'),
-            InlineKeyboardButton("⏭", callback_data='help6')
+            InlineKeyboardButton("🔙", callback_data='help_4'),
+            InlineKeyboardButton("⏭", callback_data='help_6')
         ]]
-    elif query.data == "help6":
+    elif query.data == "help_6":
         buttons = [[
             InlineKeyboardButton('REPORT', callback_data='report'),
             InlineKeyboardButton('YT-THUMB', callback_data='ytthumb'),
@@ -900,7 +900,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('FILE-STORE', callback_data='newdata'),
             InlineKeyboardButton('STATUS', callback_data='stats')
             ],[
-            InlineKeyboardButton("🔙", callback_data='help4'),
+            InlineKeyboardButton("🔙", callback_data='help_4'),
             InlineKeyboardButton('🏡 HOME 🏡', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
