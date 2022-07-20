@@ -878,8 +878,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('PASTE', callback_data='pastes'),
             InlineKeyboardButton("IMAGE", callback_data='image')
             ],[
-            InlineKeyboardButton("⏭ NEXT ⏭", callback_data='help_5'),
-            InlineKeyboardButton('🏡 HOME 🏡', callback_data='start')
+            InlineKeyboardButton("⏭", callback_data='help_5'),
+            InlineKeyboardButton('🏡', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.answer("𝖶𝖾𝗅𝖼𝗈𝗆𝖾 𝗍𝗈 𝗆𝗒 𝖧𝖾𝗅𝗉 𝗆𝗈𝖽𝗎𝗅𝖾")
@@ -926,8 +926,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('FILE-STORE', callback_data='newdata'),
             InlineKeyboardButton('STATUS', callback_data='stats')
             ],[
-            InlineKeyboardButton("🔙", callback_data='help_4'),
-            InlineKeyboardButton('🏡 HOME 🏡', callback_data='start')
+            InlineKeyboardButton("🔙", callback_data='help_5'),
+            InlineKeyboardButton('🏡', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.answer("𝖶𝖾𝗅𝖼𝗈𝗆𝖾 𝗍𝗈 𝗆𝗒 𝖧𝖾𝗅𝗉 𝗆𝗈𝖽𝗎𝗅𝖾")
