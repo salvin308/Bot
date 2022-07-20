@@ -55,7 +55,7 @@ You can deploy this bot anywhere.
 <details><summary>Deploy To Heroku</summary>
 <br>
 <p>
-<a href="https://heroku.com/deploy?template=https://github.com/salvin308/bot_extra_features">
+<a href="https://heroku.com/deploy?template=https://github.com/salvin308/bot">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 </p>
