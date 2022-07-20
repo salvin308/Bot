@@ -43,7 +43,7 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('+ Add Me To Group +', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('⚠ HΞLᎮ ⚠', callback_data='help'),
+            InlineKeyboardButton('⚠ HΞLᎮ ⚠', callback_data='help_1'),
             InlineKeyboardButton('CONTACT ME', url='https://t.me/SS_ADMIN_308_bot'),
             InlineKeyboardButton('👨🏼‍💻 ΛBOUT 👨🏼‍💻', callback_data='about')
             ],[
@@ -80,11 +80,11 @@ async def start(client, message):
             parse_mode="markdown"
             )
         return
-    if len(message.command) ==2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
+    if len(message.command) ==2 and message.command[1] in ["subscribe", "error", "okay", "help_1"]:
         buttons = [[
             InlineKeyboardButton('+ Add Me To Group +', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('⚠ HΞLᎮ ⚠', callback_data='help'),
+            InlineKeyboardButton('⚠ HΞLᎮ ⚠', callback_data='help_1'),
             InlineKeyboardButton('CONTACT ME', url='https://t.me/SS_ADMIN_308_bot'),
             InlineKeyboardButton('👨🏼‍💻 ΛBOUT 👨🏼‍💻', callback_data='about')
             ],[
