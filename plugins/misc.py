@@ -162,31 +162,8 @@ async def help(client, message):
             InlineKeyboardButton('PASTE', callback_data='pastes'),
             InlineKeyboardButton("IMAGE", callback_data='image')
             ],[
-            InlineKeyboardButton('FUN', callback_data='fun'), 
-            InlineKeyboardButton('JSONE', callback_data='son'),
-            InlineKeyboardButton('TTS', callback_data='ttss')
-            ],[
-            InlineKeyboardButton('PURGE', callback_data='purges'),
-            InlineKeyboardButton('PING', callback_data='pings'),
-            InlineKeyboardButton('TELEGRAPH', callback_data='tele')
-            ],[
-            InlineKeyboardButton('WHO IS', callback_data='whois'),
-            InlineKeyboardButton('MUTE', callback_data='restric'),
-            InlineKeyboardButton('KICK', callback_data='zombies')
-            ],[
-            InlineKeyboardButton('REPORT', callback_data='report'),
-            InlineKeyboardButton('YT-THUMB', callback_data='ytthumb'),
-            InlineKeyboardButton('STICKER-ID', callback_data='sticker')
-            ],[
-            InlineKeyboardButton('COVID', callback_data='corona'),
-            InlineKeyboardButton('AUDIO-BOOK', callback_data='abook'),
-            InlineKeyboardButton('URL-SHORT', callback_data='urlshort')
-            ],[
-            InlineKeyboardButton('G-TRANS', callback_data='gtrans'),
-            InlineKeyboardButton('FILE-STORE', callback_data='newdata'),
-            InlineKeyboardButton('STATUS', callback_data='stats')
-            ],[
-            InlineKeyboardButton('🔐 CLOSE 🔐', callback_data='close_data')
+            InlineKeyboardButton("⏭ NEXT ⏭", callback_data='help2'),
+            InlineKeyboardButton('🏡 HOME 🏡', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
