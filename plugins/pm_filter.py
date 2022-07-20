@@ -825,7 +825,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('MUTE', callback_data='restric'),
             InlineKeyboardButton('KICK', callback_data='zombies')
             ],[
-            InlineKeyboardButton("🔙", callback_data='help')
+            InlineKeyboardButton("🔙", callback_data='help'),
             InlineKeyboardButton("⏭", callback_data='help3')
         ]]
     elif query.data == "help3":
