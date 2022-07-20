@@ -41,11 +41,11 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('+ Add Me To Group +', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ Add Me To Group ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('⚠ HΞLᎮ ⚠', callback_data='help_1'),
-            InlineKeyboardButton('CONTACT ME', url='https://t.me/SS_ADMIN_308_bot'),
-            InlineKeyboardButton('👨🏼‍💻 ΛBOUT 👨🏼‍💻', callback_data='about')
+            InlineKeyboardButton('👨🏼‍💻 CONTACT DEV 👨🏼‍💻', url='https://t.me/SS_ADMIN_308_bot'),
+            InlineKeyboardButton('💥 ΛBOUT 💥', callback_data='about')
             ],[
             InlineKeyboardButton('👥 Movie Search Group 👥', url='https://t.me/SS_Movie_Club')
         ]]         
@@ -82,11 +82,11 @@ async def start(client, message):
         return
     if len(message.command) ==2 and message.command[1] in ["subscribe", "error", "okay", "help_1"]:
         buttons = [[
-            InlineKeyboardButton('+ Add Me To Group +', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ Add Me To Group ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('⚠ HΞLᎮ ⚠', callback_data='help_1'),
-            InlineKeyboardButton('CONTACT ME', url='https://t.me/SS_ADMIN_308_bot'),
-            InlineKeyboardButton('👨🏼‍💻 ΛBOUT 👨🏼‍💻', callback_data='about')
+            InlineKeyboardButton('👨🏼‍💻 CONTACT DEV 👨🏼‍💻', url='https://t.me/SS_ADMIN_308_bot'),
+            InlineKeyboardButton('💥 ΛBOUT 💥', callback_data='about')
             ],[
             InlineKeyboardButton('👥 Movie Search Group 👥', url='https://t.me/SS_Movie_Club')
         ]]
