@@ -812,6 +812,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("⏭ NEXT ⏭", callback_data='help2'),
             InlineKeyboardButton('🏡 HOME 🏡', callback_data='start')
         ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.HELP_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
     elif query.data == "help_2":
         buttons = [[
             InlineKeyboardButton('FUN', callback_data='fun'), 
@@ -829,6 +835,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("🔙", callback_data='help'),
             InlineKeyboardButton("⏭", callback_data='help_3')
         ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.HELP_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
     elif query.data == "help_3":
         buttons = [[
             InlineKeyboardButton('REPORT', callback_data='report'),
