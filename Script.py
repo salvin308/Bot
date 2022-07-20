@@ -5,7 +5,7 @@ MANAGED BY @SS_ADMIN_308_bot</b>"""
     HELP_TXT = """<b>𝙷𝙴𝚈 {}
 HERE IS THE HELP FOR MY COMMANDS.</b>"""
     ABOUT_TXT = """<b>✮ MY NAME: {}
-✮ CREATOR: <a href=https://t.me/SS_ADMIN_308_bot>SALVIN</a>
+✮ CREATOR: <a href=https://t.me/Salvin_308>SALVIN</a>
 ✮ LIBRARY: PYROGRAM
 ✮ LANGUAGE: PYTHON 3
 ✮ DATA BASE: MONGO DB
