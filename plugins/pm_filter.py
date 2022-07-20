@@ -843,6 +843,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "hellp":
         buttons = [[
+    elif query.data == "help1":
+        buttons = [[
             InlineKeyboardButton('MANUAL FILTER', callback_data='manuelfilter'),
             InlineKeyboardButton('AUTO FILTER', callback_data='autofilter'),
             InlineKeyboardButton('CONNECTIONS', callback_data='coct')
@@ -854,7 +856,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('PIN', callback_data='pin'), 
             InlineKeyboardButton('PASTE', callback_data='pastes'),
             InlineKeyboardButton("IMAGE", callback_data='image')
-            ],[
+        ]]
+    elif query.data == "help2":
+        buttons = [[
             InlineKeyboardButton('FUN', callback_data='fun'), 
             InlineKeyboardButton('JSONE', callback_data='son'),
             InlineKeyboardButton('TTS', callback_data='ttss')
@@ -866,7 +870,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('WHO IS', callback_data='whois'),
             InlineKeyboardButton('MUTE', callback_data='restric'),
             InlineKeyboardButton('KICK', callback_data='zombies')
-            ],[
+        ]]
+    elif query.data == "help3":
+        buttons = [[
             InlineKeyboardButton('REPORT', callback_data='report'),
             InlineKeyboardButton('YT-THUMB', callback_data='ytthumb'),
             InlineKeyboardButton('STICKER-ID', callback_data='sticker')
@@ -879,7 +885,57 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('FILE-STORE', callback_data='newdata'),
             InlineKeyboardButton('STATUS', callback_data='stats')
             ],[
-            InlineKeyboardButton('🔐 CLOSE 🔐', callback_data='close_data')
+            InlineKeyboardButton('🏡 HOME 🏡', callback_data='start')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.HELP_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "help4":
+        buttons = [[
+            InlineKeyboardButton('MANUAL FILTER', callback_data='manuelfilter'),
+            InlineKeyboardButton('AUTO FILTER', callback_data='autofilter'),
+            InlineKeyboardButton('CONNECTIONS', callback_data='coct')
+            ],[
+            InlineKeyboardButton('SONG', callback_data='songs'),
+            InlineKeyboardButton('EXTRA', callback_data='extra'),
+            InlineKeyboardButton("VIDEO", callback_data='video')
+            ],[
+            InlineKeyboardButton('PIN', callback_data='pin'), 
+            InlineKeyboardButton('PASTE', callback_data='pastes'),
+            InlineKeyboardButton("IMAGE", callback_data='image')
+        ]]
+    elif query.data == "help5":
+        buttons = [[
+            InlineKeyboardButton('FUN', callback_data='fun'), 
+            InlineKeyboardButton('JSONE', callback_data='son'),
+            InlineKeyboardButton('TTS', callback_data='ttss')
+            ],[
+            InlineKeyboardButton('PURGE', callback_data='purges'),
+            InlineKeyboardButton('PING', callback_data='pings'),
+            InlineKeyboardButton('TELEGRAPH', callback_data='tele')
+            ],[
+            InlineKeyboardButton('WHO IS', callback_data='whois'),
+            InlineKeyboardButton('MUTE', callback_data='restric'),
+            InlineKeyboardButton('KICK', callback_data='zombies')
+        ]]
+    elif query.data == "help6":
+        buttons = [[
+            InlineKeyboardButton('REPORT', callback_data='report'),
+            InlineKeyboardButton('YT-THUMB', callback_data='ytthumb'),
+            InlineKeyboardButton('STICKER-ID', callback_data='sticker')
+            ],[
+            InlineKeyboardButton('COVID', callback_data='corona'),
+            InlineKeyboardButton('AUDIO-BOOK', callback_data='abook'),
+            InlineKeyboardButton('URL-SHORT', callback_data='urlshort')
+            ],[
+            InlineKeyboardButton('G-TRANS', callback_data='gtrans'),
+            InlineKeyboardButton('FILE-STORE', callback_data='newdata'),
+            InlineKeyboardButton('STATUS', callback_data='stats')
+            ],[
+            InlineKeyboardButton('🏡 HOME 🏡', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.answer("𝖶𝖾𝗅𝖼𝗈𝗆𝖾 𝗍𝗈 𝗆𝗒 𝖧𝖾𝗅𝗉 𝗆𝗈𝖽𝗎𝗅𝖾")
