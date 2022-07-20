@@ -809,7 +809,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('PASTE', callback_data='pastes'),
             InlineKeyboardButton("IMAGE", callback_data='image')
             ],[
-            InlineKeyboardButton("⏭ NEXT ⏭", callback_data='help2')
+            InlineKeyboardButton("⏭ NEXT ⏭", callback_data='help2'),
+            InlineKeyboardButton('🏡 HOME 🏡', callback_data='start')
         ]]
     elif query.data == "help2":
         buttons = [[
@@ -865,7 +866,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('PASTE', callback_data='pastes'),
             InlineKeyboardButton("IMAGE", callback_data='image')
             ],[
-            InlineKeyboardButton("⏭ NEXT ⏭", callback_data='help5')
+            InlineKeyboardButton("⏭ NEXT ⏭", callback_data='help5'),
+            InlineKeyboardButton('🏡 HOME 🏡', callback_data='start')
         ]]
     elif query.data == "help5":
         buttons = [[
