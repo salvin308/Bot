@@ -835,12 +835,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("🔙", callback_data='help'),
             InlineKeyboardButton("⏭", callback_data='help_3')
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.HELP_TXT.format(query.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode='html'
-        )
+
     elif query.data == "help_3":
         buttons = [[
             InlineKeyboardButton('REPORT', callback_data='report'),
@@ -858,12 +853,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("🔙", callback_data='help_3'),
             InlineKeyboardButton('🏡', callback_data='start')
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.HELP_TXT.format(query.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode='html'
-        )
+
     elif query.data == "help_4":
         buttons = [[
             InlineKeyboardButton('MANUAL FILTER', callback_data='manuelfilter'),
@@ -881,13 +871,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("⏭", callback_data='help_5'),
             InlineKeyboardButton('🏡', callback_data='start')
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.answer("𝖶𝖾𝗅𝖼𝗈𝗆𝖾 𝗍𝗈 𝗆𝗒 𝖧𝖾𝗅𝗉 𝗆𝗈𝖽𝗎𝗅𝖾")
-        await query.message.edit_text(
-            text=script.HELP_TXT.format(query.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode='html'
-        )
+
     elif query.data == "help_5":
         buttons = [[
             InlineKeyboardButton('FUN', callback_data='fun'), 
@@ -905,13 +889,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("🔙", callback_data='help_4'),
             InlineKeyboardButton("⏭", callback_data='help_6')
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.answer("𝖶𝖾𝗅𝖼𝗈𝗆𝖾 𝗍𝗈 𝗆𝗒 𝖧𝖾𝗅𝗉 𝗆𝗈𝖽𝗎𝗅𝖾")
-        await query.message.edit_text(
-            text=script.HELP_TXT.format(query.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode='html'
-        )
+
     elif query.data == "help_6":
         buttons = [[
             InlineKeyboardButton('REPORT', callback_data='report'),
@@ -929,13 +907,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("🔙", callback_data='help_5'),
             InlineKeyboardButton('🏡', callback_data='start')
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.answer("𝖶𝖾𝗅𝖼𝗈𝗆𝖾 𝗍𝗈 𝗆𝗒 𝖧𝖾𝗅𝗉 𝗆𝗈𝖽𝗎𝗅𝖾")
-        await query.message.edit_text(
-            text=script.HELP_TXT.format(query.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode='html'
-        )
+
     elif query.data == "about":
         buttons= [[
             InlineKeyboardButton('Source Code', callback_data='alert_2')
