@@ -61,7 +61,7 @@ async def showid(client, message):
 @Client.on_message(filters.command("about"))
 async def aboutme(client, message):
         buttons= [[
-            InlineKeyboardButton('🏠 𝙷𝙾𝙼𝙴 🏠', callback_data='start')
+            InlineKeyboardButton('🏠 HOME 🏠', callback_data='start')
             ],[
             InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴 🔐', callback_data='close_data')
         ]]
@@ -78,10 +78,10 @@ async def who_is(client, message):
     await message.reply_chat_action("typing")
     # https://github.com/SpEcHiDe/PyroGramBot/blob/master/pyrobot/plugins/admemes/whois.py#L19
     status_message = await message.reply_text(
-        "`𝚂𝙴𝙰𝚁𝙲𝙷𝙸𝙽𝙶 𝚄𝚂𝙴𝚁...`"
+        "`SEARCHING USER...`"
     )
     await status_message.edit(
-        "`𝙰𝙲𝙲𝙴𝚂𝚂𝙸𝙽𝙶 𝙸𝙽𝙵𝙾𝚁𝙼𝙰𝚃𝙸𝙾𝙽...`"
+        "`ACCESSING INFORMATION...`"
     )
     from_user = None
     from_user_id, _ = extract_user(message)
