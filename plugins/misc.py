@@ -162,7 +162,7 @@ async def help(client, message):
             InlineKeyboardButton('PASTE', callback_data='pastes'),
             InlineKeyboardButton("IMAGE", callback_data='image')
             ],[
-            InlineKeyboardButton("⏭ NEXT ⏭", callback_data='help2'),
+            InlineKeyboardButton("⏭", callback_data='help_2'),
             InlineKeyboardButton('🏡 HOME 🏡', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
