@@ -1,9 +1,12 @@
 import os
 from pyrogram import Client, filters
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant, MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty
+from Script import script
+from info import PICS
 from info import IMDB_TEMPLATE
 from utils import extract_user, get_file_id, get_poster, last_online
 import time
+import random
 from datetime import datetime
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 import logging
@@ -12,6 +15,7 @@ logger.setLevel(logging.ERROR)
 
 @Client.on_message(filters.command('id'))
 async def showid(client, message):
+    await message.reply_chat_action("typing")
     chat_type = message.chat.type
     if chat_type == "private":
         user_id = message.chat.id
@@ -54,14 +58,30 @@ async def showid(client, message):
             quote=True
         )
 
+@Client.on_message(filters.command("about"))
+async def aboutme(client, message):
+        buttons= [[
+            InlineKeyboardButton('🏠 𝙷𝙾𝙼𝙴 🏠', callback_data='start')
+            ],[
+            InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴 🔐', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_photo(
+            photo=random.choice(PICS),
+            caption=script.ABOUT_TXT.format(message.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+
 @Client.on_message(filters.command(["info"]))
 async def who_is(client, message):
+    await message.reply_chat_action("typing")
     # https://github.com/SpEcHiDe/PyroGramBot/blob/master/pyrobot/plugins/admemes/whois.py#L19
     status_message = await message.reply_text(
-        "`𝗦𝗲𝗮𝗿𝗰𝗵𝗶𝗻𝗴 𝗨𝘀𝗲𝗿...`"
+        "`𝚂𝙴𝙰𝚁𝙲𝙷𝙸𝙽𝙶 𝚄𝚂𝙴𝚁...`"
     )
     await status_message.edit(
-        "`𝗔𝗰𝗰𝗲𝘀𝘀𝗶𝗻𝗴 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻...`"
+        "`𝙰𝙲𝙲𝙴𝚂𝚂𝙸𝙽𝙶 𝙸𝙽𝙵𝙾𝚁𝙼𝙰𝚃𝙸𝙾𝙽...`"
     )
     from_user = None
     from_user_id, _ = extract_user(message)
@@ -101,7 +121,7 @@ async def who_is(client, message):
             message=chat_photo.big_file_id
         )
         buttons = [[
-            InlineKeyboardButton('🔐 Close 🔐', callback_data='close_data')
+            InlineKeyboardButton('🔐 Close', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -115,7 +135,7 @@ async def who_is(client, message):
         os.remove(local_user_photo)
     else:
         buttons = [[
-            InlineKeyboardButton('🔐 Close 🔐', callback_data='close_data')
+            InlineKeyboardButton('🔐 Close', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -126,6 +146,56 @@ async def who_is(client, message):
             disable_notification=True
         )
     await status_message.delete()
+
+@Client.on_message(filters.command("help"))
+async def help(client, message):
+        buttons = [[
+            InlineKeyboardButton('MANUAL FILTER', callback_data='manuelfilter'),
+            InlineKeyboardButton('AUTO FILTER', callback_data='autofilter'),
+            InlineKeyboardButton('CONNECTIONS', callback_data='coct')
+            ],[
+            InlineKeyboardButton('SONG', callback_data='songs'),
+            InlineKeyboardButton('EXTRA', callback_data='extra'),
+            InlineKeyboardButton("VIDEO", callback_data='video')
+            ],[
+            InlineKeyboardButton('PIN', callback_data='pin'), 
+            InlineKeyboardButton('PASTE', callback_data='pastes'),
+            InlineKeyboardButton("IMAGE", callback_data='image')
+            ],[
+            InlineKeyboardButton('FUN', callback_data='fun'), 
+            InlineKeyboardButton('JSONE', callback_data='son'),
+            InlineKeyboardButton('TTS', callback_data='ttss')
+            ],[
+            InlineKeyboardButton('PURGE', callback_data='purges'),
+            InlineKeyboardButton('PING', callback_data='pings'),
+            InlineKeyboardButton('TELEGRAPH', callback_data='tele')
+            ],[
+            InlineKeyboardButton('WHO IS', callback_data='whois'),
+            InlineKeyboardButton('MUTE', callback_data='restric'),
+            InlineKeyboardButton('KICK', callback_data='zombies')
+            ],[
+            InlineKeyboardButton('REPORT', callback_data='report'),
+            InlineKeyboardButton('YT-THUMB', callback_data='ytthumb'),
+            InlineKeyboardButton('STICKER-ID', callback_data='sticker')
+            ],[
+            InlineKeyboardButton('COVID', callback_data='corona'),
+            InlineKeyboardButton('AUDIO-BOOK', callback_data='abook'),
+            InlineKeyboardButton('URL-SHORT', callback_data='urlshort')
+            ],[
+            InlineKeyboardButton('G-TRANS', callback_data='gtrans'),
+            InlineKeyboardButton('FILE-STORE', callback_data='newdata'),
+            InlineKeyboardButton('STATUS', callback_data='stats')
+            ],[
+            InlineKeyboardButton('🔐 CLOSE 🔐', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_photo(
+            photo=random.choice(PICS),
+            caption=script.HELP_TXT.format(message.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+
 
 @Client.on_message(filters.command(["imdb", 'search']))
 async def imdb_search(client, message):
@@ -144,7 +214,7 @@ async def imdb_search(client, message):
             ]
             for movie in movies
         ]
-        await k.edit('Here i found from IMDB', reply_markup=InlineKeyboardMarkup(btn))
+        await k.edit('Here is what i found on IMDb', reply_markup=InlineKeyboardMarkup(btn))
     else:
         await message.reply('Give me a movie / series Name')
 
@@ -163,7 +233,6 @@ async def imdb_callback(bot: Client, quer_y: CallbackQuery):
     message = quer_y.message.reply_to_message or quer_y.message
     if imdb:
         caption = IMDB_TEMPLATE.format(
-            requested = message.from_user.mention,
             query = imdb['title'],
             title = imdb['title'],
             votes = imdb['votes'],
@@ -205,11 +274,8 @@ async def imdb_callback(bot: Client, quer_y: CallbackQuery):
             await quer_y.message.reply_photo(photo=poster, caption=caption, reply_markup=InlineKeyboardMarkup(btn))
         except Exception as e:
             logger.exception(e)
-            await quer_y.message.reply(caption, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=False)
+            await quer_y.message.reply(caption, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
         await quer_y.message.delete()
     else:
-        await quer_y.message.edit(caption, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=False)
+        await quer_y.message.edit(caption, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
     await quer_y.answer()
-        
-
-        
