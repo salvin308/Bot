@@ -43,13 +43,12 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ ʜᴇʀᴇ ᴍᴏᴠɪᴇ 🔎', switch_inline_query_current_chat='')
             ],[
-            InlineKeyboardButton('⚠ HΞLᎮ ⚠', callback_data='help_1'),
-            InlineKeyboardButton('🤠 ΛBOUT 🤠', callback_data='about')
+
             ],[
             InlineKeyboardButton('📃 ALL FEATURES LIST 📃', callback_data='features')
             ],[
-            InlineKeyboardButton('👥 Movie Group 👥', url='https://t.me/SS_Movie_Club'),
-            InlineKeyboardButton('🗯 CONTACT DEV 🗯', url='https://t.me/SS_ADMIN_308_bot')
+            InlineKeyboardButton('⚠ HΞLᎮ ⚠', callback_data='help_1'),
+            InlineKeyboardButton('🤠 ΛBOUT 🤠', callback_data='about')
             ],[
             InlineKeyboardButton('🔐 CLOSE 🔐', callback_data='close_data')
         ]]
@@ -88,13 +87,13 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ ʜᴇʀᴇ ᴍᴏᴠɪᴇ 🔎', switch_inline_query_current_chat='')
             ],[
-            InlineKeyboardButton('⚠ HΞLᎮ ⚠', callback_data='help_1'),
-            InlineKeyboardButton('🤠 ΛBOUT 🤠', callback_data='about')
+            InlineKeyboardButton('👥 Movie Group 👥', url='https://t.me/SS_Movie_Club'),
+            InlineKeyboardButton('🗯 CONTACT DEV 🗯', url='https://t.me/SS_ADMIN_308_bot')
             ],[
             InlineKeyboardButton('📃 ALL FEATURES LIST 📃', callback_data='features')
             ],[
-            InlineKeyboardButton('👥 Movie Group 👥', url='https://t.me/SS_Movie_Club'),
-            InlineKeyboardButton('🗯 CONTACT DEV 🗯', url='https://t.me/SS_ADMIN_308_bot')
+            InlineKeyboardButton('⚠ HΞLᎮ ⚠', callback_data='help_1'),
+            InlineKeyboardButton('🤠 ΛBOUT 🤠', callback_data='about')
             ],[
             InlineKeyboardButton('🔐 CLOSE 🔐', callback_data='close_data')
         ]]
