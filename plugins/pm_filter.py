@@ -223,10 +223,6 @@ async def next_page(bot, query):
                 InlineKeyboardButton("Next ➡️", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
-    btn.insert(0,
-            [
-                InlineKeyboardButton("⭕️ ɢʀᴏᴜᴘ ⭕️", url="https://t.me/SS_Movie_Club")
-            ])
     try:
         await query.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(btn)
@@ -1368,6 +1364,10 @@ async def auto_filter(client, msg, spoll=False):
         key = f"{message.chat.id}-{message.message_id}"
         BUTTONS[key] = search
         req = message.from_user.id if message.from_user else 0
+    btn.insert(0,
+            [
+                InlineKeyboardButton("⭕️ ɢʀᴏᴜᴘ ⭕️", url="https://t.me/SS_Movie_Club")
+            ])
         btn.append(
             [InlineKeyboardButton(text=f"📃 Page 1/{round(int(total_results) / 10)}", callback_data="pages"),
              InlineKeyboardButton(text="Next ➡️", callback_data=f"next_{req}_{key}_{offset}")]
