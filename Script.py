@@ -4,6 +4,29 @@ MY NAME IS <a href=https://t.me/{}>{}</a>, I AM A ⚡ POWERFUL AUTOFILTER BOT �
 MANAGED BY @SS_ADMIN_308_bot</b>"""
     HELP_TXT = """<b>𝙷𝙴𝚈 {}
 HERE IS THE HELP FOR MY COMMANDS.</b>"""
+    FEATURES_TXT = """<b>𝙷𝙴𝚈 {}
+HERE IS THE ALL FEATURES INFO.</b> 
+✮ Auto Filter
+✮ Manual Filter
+✮ IMDB
+✮ Admin Commands
+✮ Broadcast
+✮ Index
+✮ IMDB search
+✮ Inline Search
+✮ Random pics
+✮ ids and User info
+✮ Stats, Users, Chats, Ban, Unban, Leave, Disable, Channel
+✮ Spelling Check Feature
+✮ Youtube Video , Song , Thumbnail Download.
+✮ Image Edit.
+✮ Google Translator.
+✮ Telegraph
+✮ Entertainment
+✮ Sticker ID Generator
+✮ COVID Information
+✮ File Store
+✮ Image Editor"""
     ABOUT_TXT = """<b>✮ MY NAME: {}
 ✮ CREATOR: <a href=https://t.me/Salvin_308>SALVIN</a>
 ✮ LIBRARY: PYROGRAM
