@@ -210,10 +210,10 @@ async def next_page(bot, query):
                [
                    InlineKeyboardButton("⭕️ ɢʀᴏᴜᴘ ⭕️", url="https://t.me/SS_Movie_Club")
                ])
-        btn.append(
-            [InlineKeyboardButton(f"📃 Page {round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
-             InlineKeyboardButton("Next ➡️", callback_data=f"next_{req}_{key}_{n_offset}")]
-        )
+       btn.append(
+           [InlineKeyboardButton(f"📃 Page {round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
+            InlineKeyboardButton("Next ➡️", callback_data=f"next_{req}_{key}_{n_offset}")]
+       )
     else:
         btn.append(
             [
@@ -1367,12 +1367,15 @@ async def auto_filter(client, msg, spoll=False):
             [InlineKeyboardButton(text=f"📃 Page 1/{round(int(total_results) / 10)}", callback_data="pages"),
              InlineKeyboardButton(text="Next ➡️", callback_data=f"next_{req}_{key}_{offset}")]
         )
+        btn.insert(0,
+            [InlineKeyboardButton(text="⭕️ ɢʀᴏᴜᴘ ⭕️", url="https://t.me/SS_Movie_Club")]
+        )
     else:
         btn.append(
             [InlineKeyboardButton(text="📃 Page 1/1", callback_data="pages")]
         )
         btn.insert(0,
-             [InlineKeyboardButton("⭕️ ɢʀᴏᴜᴘ ⭕️", url="https://t.me/SS_Movie_Club")]
+            [InlineKeyboardButton(text="⭕️ ɢʀᴏᴜᴘ ⭕️", url="https://t.me/SS_Movie_Club")]
         )
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
