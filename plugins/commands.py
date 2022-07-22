@@ -43,7 +43,8 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ ʜᴇʀᴇ ᴍᴏᴠɪᴇ 🔎', switch_inline_query_current_chat='')
             ],[
-
+            InlineKeyboardButton('👥 Movie Group 👥', url='https://t.me/SS_Movie_Club'),
+            InlineKeyboardButton('🗯 CONTACT DEV 🗯', url='https://t.me/SS_ADMIN_308_bot')
             ],[
             InlineKeyboardButton('📃 ALL FEATURES LIST 📃', callback_data='features')
             ],[
