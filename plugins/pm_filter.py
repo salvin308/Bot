@@ -756,10 +756,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ ʜᴇʀᴇ ᴍᴏᴠɪᴇ 🔎', switch_inline_query_current_chat='')
             ],[
             InlineKeyboardButton('⚠ HΞLᎮ ⚠', callback_data='help_1'),
-            InlineKeyboardButton('🗯 SUPPORT 🗯', url='https://t.me/SS_ADMIN_308_bot'),
             InlineKeyboardButton('🤠 ΛBOUT 🤠', callback_data='about')
             ],[
-            InlineKeyboardButton('👥 Movie Search Group 👥', url='https://t.me/SS_Movie_Club')
+            InlineKeyboardButton('📃 ALL FEATURES LIST 📃', callback_data='features')
+            ],[
+            InlineKeyboardButton('👥 Movie Group 👥', url='https://t.me/SS_Movie_Club'),
+            InlineKeyboardButton('🗯 CONTACT DEV 🗯', url='https://t.me/SS_ADMIN_308_bot')
             ],[
             InlineKeyboardButton('🔐 CLOSE 🔐', callback_data='close_data')
         ]]
@@ -898,6 +900,18 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.HELP_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+        
+    elif query.data == "features":
+        buttons = [[
+            InlineKeyboardButton('🚶 BACK 🚶', callback_data='start')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.FEATURES_TXT,
+            disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
         )
