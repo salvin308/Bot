@@ -193,11 +193,6 @@ async def next_page(bot, query):
             ]
             for file in files
         ]
-    btn.insert(0,
-            [
-                InlineKeyboardButton("⭕️ ɢʀᴏᴜᴘ ⭕️", url="https://t.me/SS_Movie_Club")
-            ])
-
     if 0 < offset <= 10:
         off_set = 0
     elif offset == 0:
@@ -211,6 +206,10 @@ async def next_page(bot, query):
                                   callback_data="pages")]
         )
     elif off_set is None:
+       btn.insert(0,
+               [
+                   InlineKeyboardButton("⭕️ ɢʀᴏᴜᴘ ⭕️", url="https://t.me/SS_Movie_Club")
+               ])
         btn.append(
             [InlineKeyboardButton(f"📃 Page {round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
              InlineKeyboardButton("Next ➡️", callback_data=f"next_{req}_{key}_{n_offset}")]
