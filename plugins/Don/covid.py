@@ -1,5 +1,4 @@
 import os
-import random
 import requests
 from requests.utils import requote_uri
 from pyrogram import Client, filters
@@ -13,7 +12,7 @@ BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton("CLOSE", callback_data='cl
 async def reply_info(client, message):
     query = message.text.split(None, 1)[1]
     await message.reply_photo(
-        photo=random.choice(PICS),
+        photo="https://telegra.ph/file/96857d5ddf6643647a3d1.jpg https://telegra.ph/file/c501b49a11a89df538dd3.jpg https://telegra.ph/file/6a308c718c3e3dd3d4120.jpg https://telegra.ph/file/6780f1e2706d1f9b78e5b.jpg https://telegra.ph/file/1e796ee8b7d4269ae1fbc.jpg https://telegra.ph/file/4b1bba9fa8c9ef2c5247a.jpg https://telegra.ph/file/8731ae4f058aafa01f6af.jpg https://telegra.ph/file/f3362123e598d0589b9a5.jpg https://telegra.ph/file/cb4a5ba0db89608e59c8e.jpg",
         caption=covid_info(query),
         quote=True
     )
