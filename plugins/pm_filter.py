@@ -886,7 +886,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('YT-THUMB', callback_data='ytthumb'),
             InlineKeyboardButton('STICKER-ID', callback_data='sticker')
             ],[
-            InlineKeyboardButton('COVID', callback_data='corona'),
+            InlineKeyboardButton('SHARE-TEXT', callback_data='share_text'),
             InlineKeyboardButton('AUDIO-BOOK', callback_data='abook'),
             InlineKeyboardButton('URL-SHORT', callback_data='urlshort')
             ],[
@@ -961,13 +961,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-    elif query.data == "corona":
+    elif query.data == "share_text":
         buttons = [[
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='help_3')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=script.CORONA_TXT,
+            text=script.share_text_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
