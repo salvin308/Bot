@@ -222,6 +222,10 @@ async def next_page(bot, query):
                 InlineKeyboardButton("Next ➡️", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
+        btn.insert(0,
+                [
+                    InlineKeyboardButton("⭕️ ɢʀᴏᴜᴘ ⭕️", url="https://t.me/SS_Movie_Club")
+                ])
     try:
         await query.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(btn)
@@ -1218,7 +1222,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-    elif query.data == "help_3":
+    elif query.data == "newdata":
         buttons = [[
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='help')
         ]]
