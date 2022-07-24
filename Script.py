@@ -33,8 +33,7 @@ HERE IS THE ALL FEATURES INFO.</b>
 ✮ LANGUAGE: PYTHON 3
 ✮ DATA BASE: MONGO DB
 ✮ BOT SERVER: HEROKU
-<b>SUPPORT:</b>
-- <a href=https://t.me/SS_ADMIN_308_bot>SS Admin Chat Bot</a></b>"""
+✮ BOT SUPPORT CHAT:</b> <a href=https://t.me/SS_ADMIN_308_bot>SS Admin Chat Bot</a></b>"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 ›› <b>Donation</b>
 ⪼ <b>You Can Donate Any Amount You Have 💳. 
