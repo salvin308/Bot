@@ -1461,10 +1461,9 @@ async def advantage_spell_chok(msg):
     gs_parsed = []
     if not g_s:
         k = await msg.reply(f"<b>Sorry {msg.from_user.mention} ☹\nI couldn't find anything related to you request 🤧</b>")
-                reply_markup=InlineKeyboardMarkup( [[
+                InlineKeyboardMarkup( [[
                    InlineKeyboardButton("💥 REASONS 💥", callback_data="reasons")
-                   ]]
-               )
+                   ]])
         return
     regex = re.compile(r".*(imdb|wikipedia).*", re.IGNORECASE)  # look for imdb / wiki results
     gs = list(filter(regex.match, g_s))
@@ -1492,10 +1491,9 @@ async def advantage_spell_chok(msg):
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
         k = await msg.reply(f"<b>Sorry {msg.from_user.mention} ☹\nI couldn't find anything related to you request 🤧</b>")
-                reply_markup=InlineKeyboardMarkup( [[
+                InlineKeyboardMarkup( [[
                    InlineKeyboardButton("💥 REASONS 💥", callback_data="reasons")
-                   ]]
-               )
+                   ]] )
         return
     SPELL_CHECK[msg.message_id] = movielist
     btn = [[
