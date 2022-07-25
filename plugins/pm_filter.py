@@ -254,7 +254,12 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit(f'<b>Hey {query.from_user.mention}, This Movie is not Released or yet added.</b>')
+            k = await query.message.edit(f'<b>Hey {query.from_user.mention}, This Movie is not Released or yet added.</b>',
+                    reply_markup=InlineKeyboardMarkup( [[
+                       InlineKeyboardButton("💥 REASONS 💥", callback_data="reasons")
+                       ]]
+                    )
+                )
 
 @Client.on_callback_query()
 async def cb_handler(client: Client, query: CallbackQuery):
@@ -1462,7 +1467,7 @@ async def advantage_spell_chok(msg):
     if not g_s:
         k = await msg.reply(f"<b>Sorry {msg.from_user.mention} ☹\nI couldn't find anything related to you request 🤧</b>",
                 reply_markup=InlineKeyboardMarkup( [[
-                   InlineKeyboardButton("REASONS", callback_data="reasons")
+                   InlineKeyboardButton("💥 REASONS 💥", callback_data="reasons")
                    ]]
                 )
             )
@@ -1494,7 +1499,7 @@ async def advantage_spell_chok(msg):
     if not movielist:
         k = await msg.reply(f"<b>Sorry {msg.from_user.mention} ☹\nI couldn't find anything related to you request 🤧</b>",
                 reply_markup=InlineKeyboardMarkup( [[
-                   InlineKeyboardButton("REASONS", callback_data="reasons")
+                   InlineKeyboardButton("💥 REASONS 💥", callback_data="reasons")
                    ]]
                 )
             )
