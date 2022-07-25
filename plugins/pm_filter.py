@@ -76,6 +76,10 @@ BUTTONS = {}
 SPELL_CHECK = {}
 FILTER_MODE = {}
 
+REASON_BUTTON = [[
+  InlineKeyboardButton("REASONS", callback_data="reasons")
+  ]]
+
 @Client.on_message(filters.command('autofilter'))
 async def fil_mod(client, message): 
       mode_on = ["yes", "on", "true"]
@@ -1460,10 +1464,8 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply(f"<b>Sorry {msg.from_user.mention} ☹\nI couldn't find anything related to you request 🤧</b>")
-                InlineKeyboardMarkup( [[
-                   InlineKeyboardButton("💥 REASONS 💥", callback_data="reasons")
-                   ]])
+        k = await msg.reply(f"<b>Sorry {msg.from_user.mention} ☹\nI couldn't find anything related to you request 🤧</b>"),
+                reply_markup=InlineKeyboardMarkup(REASON_BUTTON)
         return
     regex = re.compile(r".*(imdb|wikipedia).*", re.IGNORECASE)  # look for imdb / wiki results
     gs = list(filter(regex.match, g_s))
@@ -1490,10 +1492,8 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply(f"<b>Sorry {msg.from_user.mention} ☹\nI couldn't find anything related to you request 🤧</b>")
-                InlineKeyboardMarkup( [[
-                   InlineKeyboardButton("💥 REASONS 💥", callback_data="reasons")
-                   ]] )
+        k = await msg.reply(f"<b>Sorry {msg.from_user.mention} ☹\nI couldn't find anything related to you request 🤧</b>"),
+                reply_markup=InlineKeyboardMarkup(REASON_BUTTON)
         return
     SPELL_CHECK[msg.message_id] = movielist
     btn = [[
