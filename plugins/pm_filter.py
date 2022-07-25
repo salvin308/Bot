@@ -1465,7 +1465,6 @@ async def advantage_spell_chok(msg):
                    InlineKeyboardButton("💥 REASONS 💥", callback_data="reasons")
                    ]]
                )
-            )
         return
     regex = re.compile(r".*(imdb|wikipedia).*", re.IGNORECASE)  # look for imdb / wiki results
     gs = list(filter(regex.match, g_s))
@@ -1497,7 +1496,6 @@ async def advantage_spell_chok(msg):
                    InlineKeyboardButton("💥 REASONS 💥", callback_data="reasons")
                    ]]
                )
-            )
         return
     SPELL_CHECK[msg.message_id] = movielist
     btn = [[
