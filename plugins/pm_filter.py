@@ -255,9 +255,6 @@ async def advantage_spoll_choker(bot, query):
             await auto_filter(bot, query, k)
         else:
             k = await query.message.edit(f'<b>Hey {query.from_user.mention}, This Movie is not Released or yet added.</b>')
-            await asyncio.sleep(1000000000000000000000000000000000)
-            await k.delete()
-
 
 @Client.on_callback_query()
 async def cb_handler(client: Client, query: CallbackQuery):
@@ -1460,7 +1457,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply(f"<b>Sorry {query.from_user.mention} ☹\nI couldn't find anything related to you request 🤧</b>")
+        k = await msg.reply(f"<b>Sorry {msg.from_user.mention} ☹\nI couldn't find anything related to you request 🤧</b>")
         return
     regex = re.compile(r".*(imdb|wikipedia).*", re.IGNORECASE)  # look for imdb / wiki results
     gs = list(filter(regex.match, g_s))
@@ -1487,7 +1484,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply(f"<b>Sorry {query.from_user.mention} ☹\nI couldn't find anything related to you request 🤧</b>")
+        k = await msg.reply(f"<b>Sorry {msg.from_user.mention} ☹\nI couldn't find anything related to you request 🤧</b>")
         return
     SPELL_CHECK[msg.message_id] = movielist
     btn = [[
