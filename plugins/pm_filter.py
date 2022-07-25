@@ -261,7 +261,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     if query.data == "close_data":
         await query.message.delete()
         
-    elif query.data == "reasons"
+    elif query.data == "reasons":
           await query.answer(f"⚠ REASONS FOR NOT GETTING MOVIE FILES ⚠\n\n⭐️You Requested {search} is not Releases in OTT\n⭐️You Requested {search} is not Available in my Database", show_alert=True)
 
     elif query.data == "alert_2":
