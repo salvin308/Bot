@@ -260,6 +260,9 @@ async def advantage_spoll_choker(bot, query):
 async def cb_handler(client: Client, query: CallbackQuery):
     if query.data == "close_data":
         await query.message.delete()
+        
+    elif query.data == "reasons"
+          await query.answer(f"⚠ REASONS FOR NOT GETTING MOVIE FILES ⚠\n\n⭐️You Requested {search} is not Releases in OTT\n⭐️You Requested {search} is not Available in my Database", show_alert=True)
 
     elif query.data == "alert_2":
           await query.answer(f"❗️ Hey {query.from_user.first_name} Check Your Internet and 🔁Try Again ❗", show_alert=True)
@@ -1458,6 +1461,11 @@ async def advantage_spell_chok(msg):
     gs_parsed = []
     if not g_s:
         k = await msg.reply(f"<b>Sorry {msg.from_user.mention} ☹\nI couldn't find anything related to you request 🤧</b>")
+                reply_markup=InlineKeyboardMarkup( [[
+                   InlineKeyboardButton("💥 REASONS 💥", callback_data="reasons")
+                   ]]
+               )
+            )
         return
     regex = re.compile(r".*(imdb|wikipedia).*", re.IGNORECASE)  # look for imdb / wiki results
     gs = list(filter(regex.match, g_s))
@@ -1485,6 +1493,11 @@ async def advantage_spell_chok(msg):
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
         k = await msg.reply(f"<b>Sorry {msg.from_user.mention} ☹\nI couldn't find anything related to you request 🤧</b>")
+                reply_markup=InlineKeyboardMarkup( [[
+                   InlineKeyboardButton("💥 REASONS 💥", callback_data="reasons")
+                   ]]
+               )
+            )
         return
     SPELL_CHECK[msg.message_id] = movielist
     btn = [[
