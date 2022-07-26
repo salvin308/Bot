@@ -267,12 +267,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.delete()
         
     elif query.data == "reasons":
-          await query.answer("""             ‼️ Instruction ‼️
+          await query.answer("""                    ‼️ Instruction ‼️
 
 ⚠️ നിങ്ങളുദ്ദേശിച്ച Movie കിട്ടിയില്ല എങ്കിൽ Movieയുടെ പേര് type ചെയ്തു  അയച്ച് ശേഷം @admin എന്ന് റിപ്ലേടൈപ്പ് ചെയ്യുക. അപ്പോൾ admin ആ  മൂവി Name നോക്കിയിട്ട് അത് ബോട്ടിൽ add ചെയ്യുന്നതാണ്. ⚠️
-
                          Or
-
 ⚠️ ഇവിടെ OTT RELEASED or DVD RELEASED Movieകൾ മാത്രമേ ലഭിക്കുകയുള്ളൂ. ⚠️""", show_alert=True)
 
     elif query.data == "alert_2":
