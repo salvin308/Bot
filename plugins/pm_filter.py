@@ -267,7 +267,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.delete()
         
     elif query.data == "reasons":
-          await query.answer("⚠ __REASONS FOR NOT GETTING MOVIE FILES__ ⚠\n\n⭐️ You Requested Movie is not Releases in OTT.\n or\n⭐️ You Requested Movie is not Available in my Database.", show_alert=True)
+          await query.answer("""‼️ Instruction ‼️
+
+⚠️ നിങ്ങളുദ്ദേശിച്ച Movie കിട്ടിയില്ല എങ്കിൽ Movieയുടെ പേര് type ചെയ്തു  അയച്ച് ശേഷം @admin എന്ന് റിപ്ലേടൈപ്പ് ചെയ്യുക. അപ്പോൾ admin ആ  മൂവി Name നോക്കിയിട്ട് അത് ബോട്ടിൽ add ചെയ്യുന്നതാണ്. ⚠️
+
+                         Or
+
+⚠️ അഥവാ നിങ്ങൾ ഉദ്ദേശിച്ച Movie OTT പ്ലാറ്റ്ഫോമുകളിൽ Release ആയെന്ന് Google  നോക്കി ഉറപ്പുവരുത്തുക. ഇവിടെ OTT RELEASED or DVD RELEASED Movieകൾ മാത്രമേ ലഭിക്കുകയുള്ളൂ. ⚠️""", show_alert=True)
 
     elif query.data == "alert_2":
           await query.answer(f"❗️ Hey {query.from_user.first_name} Check Your Internet and 🔁Try Again ❗", show_alert=True)
@@ -1467,7 +1473,8 @@ async def advantage_spell_chok(msg):
     if not g_s:
         k = await msg.reply(f"<b>Sorry {msg.from_user.mention} ☹\nI couldn't find anything related to you request 🤧</b>",
                 reply_markup=InlineKeyboardMarkup( [[
-                   InlineKeyboardButton("💥 REASONS 💥", callback_data="reasons")
+                   InlineKeyboardButton("‼ READ THIS INSTRUCTION ‼", callback_data="reasons"),
+                   InlineKeyboardButton("🔍 SEARCH IN GOOGLE 🔎", url=f"https://www.google.com/search?q={search}"),
                    ]]
                 )
             )
@@ -1499,7 +1506,8 @@ async def advantage_spell_chok(msg):
     if not movielist:
         k = await msg.reply(f"<b>Sorry {msg.from_user.mention} ☹\nI couldn't find anything related to you request 🤧</b>",
                 reply_markup=InlineKeyboardMarkup( [[
-                   InlineKeyboardButton("💥 REASONS 💥", callback_data="reasons")
+                   InlineKeyboardButton("‼ READ THIS INSTRUCTION ‼", callback_data="reasons"),
+                   InlineKeyboardButton("🔍 SEARCH IN GOOGLE 🔎", url=f"https://www.google.com/search?q={search}"),
                    ]]
                 )
             )
