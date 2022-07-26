@@ -256,8 +256,7 @@ async def advantage_spoll_choker(bot, query):
         else:
             k = await query.message.edit(f'<b>Hey {query.from_user.mention}, This Movie is not Released or yet added.\nClick the Buttons in the Below 👇</b>',
                     reply_markup=InlineKeyboardMarkup( [[
-                       InlineKeyboardButton("‼ READ THIS INSTRUCTION ‼", callback_data="reasons"),
-                       InlineKeyboardButton("🔍 SEARCH IN GOOGLE 🔎", url=f"https://www.google.com/search?q={query.text}"),
+                       InlineKeyboardButton("‼ READ THIS INSTRUCTION ‼", callback_data="reasons")
                        ]]
                     )
                 )
@@ -1474,8 +1473,7 @@ async def advantage_spell_chok(msg):
     if not g_s:
         k = await msg.reply(f"<b>Sorry {msg.from_user.mention} ☹\nI couldn't find anything related to you request 🤧</b>",
                 reply_markup=InlineKeyboardMarkup( [[
-                   InlineKeyboardButton("‼ READ THIS INSTRUCTION ‼", callback_data="reasons"),
-                   InlineKeyboardButton("🔍 SEARCH IN GOOGLE 🔎", url=f"https://www.google.com/search?q={search}"),
+                   InlineKeyboardButton("‼ READ THIS INSTRUCTION ‼", callback_data="reasons")
                    ]]
                 )
             )
@@ -1507,8 +1505,7 @@ async def advantage_spell_chok(msg):
     if not movielist:
         k = await msg.reply(f"<b>Sorry {msg.from_user.mention} ☹\nI couldn't find anything related to you request 🤧</b>",
                 reply_markup=InlineKeyboardMarkup( [[
-                   InlineKeyboardButton("‼ READ THIS INSTRUCTION ‼", callback_data="reasons"),
-                   InlineKeyboardButton("🔍 SEARCH IN GOOGLE 🔎", url=f"https://www.google.com/search?q={search}"),
+                   InlineKeyboardButton("‼ READ THIS INSTRUCTION ‼", callback_data="reasons")
                    ]]
                 )
             )
