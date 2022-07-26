@@ -257,7 +257,7 @@ async def advantage_spoll_choker(bot, query):
             k = await query.message.edit(f'<b>Hey {query.from_user.mention}, This Movie is not Released or yet added.\nClick the Buttons in the Below 👇</b>',
                     reply_markup=InlineKeyboardMarkup( [[
                        InlineKeyboardButton("‼ READ THIS INSTRUCTION ‼", callback_data="reasons"),
-                       InlineKeyboardButton("🔍 SEARCH IN GOOGLE 🔎", url=f"https://www.google.com/search?q={search}"),
+                       InlineKeyboardButton("🔍 SEARCH IN GOOGLE 🔎", url=f"https://www.google.com/search?q={query.text}"),
                        ]]
                     )
                 )
