@@ -254,9 +254,10 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit(f'<b>Hey {query.from_user.mention}, This Movie is not Released or yet added.</b>',
+            k = await query.message.edit(f'<b>Hey {query.from_user.mention}, This Movie is not Released or yet added.\nClick the Buttons in the Below 👇</b>',
                     reply_markup=InlineKeyboardMarkup( [[
-                       InlineKeyboardButton("💥 REASONS 💥", callback_data="reasons")
+                       InlineKeyboardButton("‼ READ THIS INSTRUCTION ‼", callback_data="reasons"),
+                       InlineKeyboardButton("🔍 SEARCH IN GOOGLE 🔎", url=f"https://www.google.com/search?q={search}"),
                        ]]
                     )
                 )
