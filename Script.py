@@ -125,9 +125,7 @@ Helps you to know your ping 🚶🏼‍♂️
 • /alive - To check you are alive.
 • /help - To get help.
 • /ping - To get your ping.
-• /repo - Source Code.
-• /channel - Channel Details.
-• /ajax - Bot Link.
+• /bot_info - Bot Link.
 <b>🏹Usage🏹 :</b>
 • This commands can be used in pms and groups
 • This commands can be used buy everyone in the groups and bots pm
@@ -157,7 +155,7 @@ Delete A Lot Of Messages From Groups!
  <b>ADMIN</b> 
 ◉ /purge :- Delete All Messages From The Replied To Message, To The Current Message"""
     BUTTON_TXT = """Help: <b>Buttons</b>
--SANTO  Supports both url and alert inline buttons.
+-Bot  Supports both url and alert inline buttons.
 <b>NOTE:</b>
 1. Telegram will not allows you to send buttons without any content, so content is mandatory.
 2. SANTO supports buttons with any telegram media type.
