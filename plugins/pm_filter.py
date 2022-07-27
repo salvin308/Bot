@@ -1500,8 +1500,6 @@ async def advantage_spell_chok(msg):
     if not movielist:
         k = await msg.reply(f"<b>Sorry {msg.from_user.mention} ☹\nI couldn't find anything related to you request 🤧</b>",
                 reply_markup=InlineKeyboardMarkup( [[
-                   InlineKeyboardButton("🔍 SEARCH IN GOOGLE 🔎", url=f"https://www.google.com/search?q={search}")
-                   ],[
                    InlineKeyboardButton("‼ READ THIS INSTRUCTION ‼", callback_data="reasons")
                    ]]
                 )
