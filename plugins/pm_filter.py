@@ -255,10 +255,7 @@ async def advantage_spoll_choker(bot, query):
             await auto_filter(bot, query, k)
         else:
             k = await query.message.edit(f'<b>Hey {query.from_user.mention}, ⚠️ നിങ്ങളുദ്ദേശിച്ച Movie കിട്ടിയില്ല എങ്കിൽ Movieയുടെ പേര് type ചെയ്തു  അയച്ച് ശേഷം @admin എന്ന് റിപ്ലേടൈപ്പ് ചെയ്യുക. അപ്പോൾ admin ആ  മൂവി Name നോക്കിയിട്ട് അത് ബോട്ടിൽ add ചെയ്യുന്നതാണ്.\nClick the Buttons in the Below 👇</b>',
-                    query = search  
                     reply_markup=InlineKeyboardMarkup( [[
-                       InlineKeyboardButton("🔍 𝚂𝙴𝙰𝚁𝙲𝙷 𝚃𝙾 𝙶𝙾𝙾𝙶𝙻𝙴 🔎", url=f"https://www.google.com/search?q={query}")
-                       ],[
                        InlineKeyboardButton("‼ READ THIS INSTRUCTION ‼", callback_data="reasons")
                        ]]
                     )
@@ -1503,6 +1500,8 @@ async def advantage_spell_chok(msg):
     if not movielist:
         k = await msg.reply(f"<b>Sorry {msg.from_user.mention} ☹\nI couldn't find anything related to you request 🤧</b>",
                 reply_markup=InlineKeyboardMarkup( [[
+                   InlineKeyboardButton("🔍 SEARCH IN GOOGLE 🔎", url=f"https://www.google.com/search?q={search}")
+                   ],[
                    InlineKeyboardButton("‼ READ THIS INSTRUCTION ‼", callback_data="reasons")
                    ]]
                 )
