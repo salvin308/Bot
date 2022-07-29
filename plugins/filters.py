@@ -14,8 +14,11 @@ from info import ADMINS
 
 @Client.on_message(filters.regex("movie") | filters.regex("Movie") | filters.regex("MOVIE"))
 async def regex(client, message):
-    await message.reply_text("""‼️‼️INSTRUCTIONS‼️‼️
+    await message.reply_text("""‼️‼️ INSTRUCTIONS ‼️‼️
+    
 ℹ️ MOVIE REQUESTS IN THIS FORMATS ℹ️ 👇🏻
+
+
 <b>Pushpa ✅
 Pushpa 2021 ✅
 Pushpa Malayalam ✅</b>
