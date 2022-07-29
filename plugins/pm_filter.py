@@ -776,7 +776,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔐 CLOSE 🔐', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await lolan.message.edit("⬜◻◻◻◻")
+        reply1 = await query.message.edit("⬜◻◻◻◻")
         await asyncio.sleep(0.5)
         reply2 = await reply1.edit("⬜⬜◻◻◻")
         await asyncio.sleep(0.5)
