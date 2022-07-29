@@ -5,10 +5,12 @@ MANAGED BY @SS_ADMIN_308_bot</b>"""
     HELP_TXT = """<b>𝙷𝙴𝚈 {}
 HERE IS THE HELP FOR MY COMMANDS.</b>"""
     FEATURES_TXT = """<b>𝙷𝙴𝚈 {}
-HERE IS THE ALL FEATURES INFO.</b> 
+HERE IS THE ALL FEATURES.</b>
+
 ✮ Auto Filter
 ✮ Manual Filter
 ✮ IMDB
+✮ Welcome Message
 ✮ Admin Commands
 ✮ Broadcast
 ✮ Index
@@ -19,13 +21,14 @@ HERE IS THE ALL FEATURES INFO.</b>
 ✮ Stats, Users, Chats, Ban, Unban, Leave, Disable, Channel
 ✮ Spelling Check Feature
 ✮ Youtube Video , Song , Thumbnail Download.
-✮ Image Edit.
-✮ Google Translator.
+✮ Image Edit
+✮ Google Translator
 ✮ Telegraph
-✮ Entertainment
+✮ Games
 ✮ Sticker ID Generator
-✮ COVID Information
-✮ File Store
+✮ Text Message URL
+✮ URL Shorter
+✮ File to Link
 ✮ Image Editor"""
     ABOUT_TXT = """<b>✮ MY NAME: {}
 ✮ CREATOR: <a href=https://t.me/Salvin_308>SALVIN</a>
@@ -158,10 +161,10 @@ Delete A Lot Of Messages From Groups!
 -Bot  Supports both url and alert inline buttons.
 <b>NOTE:</b>
 1. Telegram will not allows you to send buttons without any content, so content is mandatory.
-2. SANTO supports buttons with any telegram media type.
+2. SPIDY supports buttons with any telegram media type.
 3. Buttons should be properly parsed as markdown format
 <b>URL buttons:</b>
-<code>[Button Text](buttonurl:https://t.me/movie_club_308)</code>
+<code>[Button Text](buttonurl:https://t.me/movie_club)</code>
 <b>Alert buttons:</b>
 <code>[Button Text](buttonalert:This is an alert message)</code>"""
     AUTOFILTER_TXT = """<b>AUTO FILTER ON/OFF MODULE..</b>
