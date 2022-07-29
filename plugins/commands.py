@@ -117,7 +117,7 @@ async def start(client, message):
         file_id = data
         pre = ""
     if data.split("-", 1)[0] == "BATCH":
-        sts = await message.reply_sticker("CAACAgUAAxkBAAIYY2LkAbeLNAe4_MHeVPnF6M5IssqBAAKaAAPIlGQULGXh4VzvJWoeBA")
+        sts = await message.reply_sticker("CAACAgUAAxkBAAIYeGLkA79wEhAQBIPNscY7zCSAJGHQAAKlAAPIlGQUeEOFXgFFtkYeBA")
         file_id = data.split("-", 1)[1]
         msgs = BATCH_FILES.get(file_id)
         if not msgs:
@@ -165,7 +165,7 @@ async def start(client, message):
         await sts.delete()
         return
     elif data.split("-", 1)[0] == "DSTORE":
-        sts = await message.reply_sticker("CAACAgUAAxkBAAIYY2LkAbeLNAe4_MHeVPnF6M5IssqBAAKaAAPIlGQULGXh4VzvJWoeBA")
+        sts = await message.reply_sticker("CAACAgUAAxkBAAIYeGLkA79wEhAQBIPNscY7zCSAJGHQAAKlAAPIlGQUeEOFXgFFtkYeBA")
         b_string = data.split("-", 1)[1]
         decoded = (base64.urlsafe_b64decode(b_string + "=" * (-len(b_string) % 4))).decode("ascii")
         try:
@@ -493,7 +493,7 @@ async def settings(client, message):
 @Client.on_message(filters.command('set_template'))
 async def save_template(client, message):
     await message.reply_chat_action("typing")
-    sts = await message.reply("**CHECKING NEW TEMPLATE**")
+    sts = await message.reply_sticker("CAACAgUAAxkBAAIYe2LkBCVSAAGAuRcB0N8ls0XEkwiTGAACmgADyJRkFCxl4eFc7yVqHgQ")
     userid = message.from_user.id if message.from_user else None
     if not userid:
         return await message.reply(f"You are anonymous admin. Use /connect {message.chat.id} in PM")
