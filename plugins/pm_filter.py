@@ -776,7 +776,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔐 CLOSE 🔐', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
+        reply1 = await lolan.message.edit("⬜◻◻◻◻")
+        await asyncio.sleep(0.5)
+        reply2 = await reply1.edit("⬜⬜◻◻◻")
+        await asyncio.sleep(0.5)
+        reply3 = await reply2.edit("⬜⬜⬜◻◻")
+        await asyncio.sleep(0.5)
+        reply4 = await reply3.edit("⬜⬜⬜⬜◻")
+        await asyncio.sleep(0.5)
+        reply5 = await reply4.edit("⬜⬜⬜⬜⬜")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode='html'
