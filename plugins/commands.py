@@ -493,7 +493,7 @@ async def settings(client, message):
 @Client.on_message(filters.command('set_template'))
 async def save_template(client, message):
     await message.reply_chat_action("typing")
-    sts = await message.reply_sticker("CAACAgUAAxkBAAIYe2LkBCVSAAGAuRcB0N8ls0XEkwiTGAACmgADyJRkFCxl4eFc7yVqHgQ")
+    sts = await message.reply('<b>Loading ...</b>')
     userid = message.from_user.id if message.from_user else None
     if not userid:
         return await message.reply(f"You are anonymous admin. Use /connect {message.chat.id} in PM")
