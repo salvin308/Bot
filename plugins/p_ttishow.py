@@ -139,7 +139,7 @@ async def re_enable_chat(bot, message):
 @Client.on_message(filters.command('stats') & filters.incoming)
 async def get_ststs(bot, message):
     await message.reply_chat_action("typing")
-    rju = await message.reply('<b>Accesing Storage...</b>')
+    rju = await message.reply_sticker("CAACAgUAAxkBAAIYe2LkBCVSAAGAuRcB0N8ls0XEkwiTGAACmgADyJRkFCxl4eFc7yVqHgQ")
     total_users = await db.total_users_count()
     totl_chats = await db.total_chat_count()
     files = await Media.count_documents()
