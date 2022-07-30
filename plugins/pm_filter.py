@@ -857,15 +857,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton(text="𝖢𝗅𝗈𝗌𝖾", callback_data="close_data")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)        
-        reply1 = await query.message.edit("<b>Loading</b> ⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("<b>Loading</b> ⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("<b>Loading</b> ⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("<b>Loading</b> ⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(       
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(      
             text="Select your required mode from below!",
             reply_markup=reply_markup,
             parse_mode='html'
@@ -922,15 +924,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("NEXT »", callback_data='help_3')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("<b>Loading</b> ⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("<b>Loading</b> ⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("<b>Loading</b> ⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("<b>Loading</b> ⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.HELP_TXT.format(query.from_user.mention),
             reply_markup=reply_markup,
             parse_mode='html'
@@ -954,15 +958,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🏡 HOME 🏡', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.HELP_TXT.format(query.from_user.mention),
             reply_markup=reply_markup,
             parse_mode='html'
@@ -973,15 +979,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.FEATURES_TXT.format(query.from_user.mention),
             disable_web_page_preview=True,
             reply_markup=reply_markup,
@@ -996,15 +1004,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔐 Close 🔐', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.ABOUT_TXT.format(temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode='html'
@@ -1014,15 +1024,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='help_2')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.RESTRIC_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
@@ -1033,15 +1045,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='help_1')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.IMAGE_TXT.format(temp.B_NAME),
             disable_web_page_preview=True,
             reply_markup=reply_markup,
@@ -1052,15 +1066,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='help_2')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.WHOIS_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -1070,15 +1086,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='help_3')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.share_text_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
@@ -1089,15 +1107,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='help_3')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.URLSHORT_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
@@ -1108,15 +1128,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='help_2')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.ZOMBIES_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
@@ -1127,15 +1149,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='help_2')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.FUN_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -1145,15 +1169,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='help_1')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.VIDEO_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -1163,15 +1189,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='help_1')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.PIN_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -1181,15 +1209,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='help_2')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.JSON_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -1199,15 +1229,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='help_1')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.PASTE_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -1217,15 +1249,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='help_2')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.PINGS_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -1235,15 +1269,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='help_2')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.TTS_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -1253,15 +1289,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='help_2')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.PURGE_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -1271,15 +1309,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='help_2')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.TELE_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -1289,15 +1329,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.SOURCE_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -1308,15 +1350,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('⏹️ Buttons ⏹', callback_data='button')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.MANUELFILTER_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -1326,15 +1370,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='manuelfilter')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.BUTTON_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -1344,15 +1390,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='help_1')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.AUTOFILTER_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -1362,15 +1410,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='help_1')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.CONNECTION_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -1381,15 +1431,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('👮‍♂️ OWNER 👮', callback_data='admin')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.EXTRAMOD_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -1400,15 +1452,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('LANG CODES', url='https://cloud.google.com/translate/docs/languages')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.ABOUT_TXT.format(temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode='html'
@@ -1425,15 +1479,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='help_3')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.REPORT_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
@@ -1444,15 +1500,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='help_3')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.STICKER_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
@@ -1463,15 +1521,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='help_3')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.YTTHUMB_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
@@ -1482,15 +1542,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='extra')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.ADMIN_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -1500,15 +1562,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='help_3')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.ABOOK_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
@@ -1519,15 +1583,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='help_3')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.FILE_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -1537,15 +1603,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🚶 BACK 🚶', callback_data='help_1')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.SONG_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -1563,15 +1631,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
         free = 536870912 - monsize
         monsize = get_size(monsize)
         free = get_size(free)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.STATUS_TXT.format(total, users, chats, monsize, free),
             reply_markup=reply_markup,
             parse_mode='html'
@@ -1590,15 +1660,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
         free = 536870912 - monsize
         monsize = get_size(monsize)
         free = get_size(free)
-        reply1 = await query.message.edit("⬜◼◼◼")
+        reply1 = await query.message.edit("<b>Loading .</b>")
         await asyncio.sleep(0.5)
-        reply2 = await reply1.edit("⬜⬜◼◼")
+        reply2 = await reply1.edit("<b>Loading ..</b>")
         await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("⬜⬜⬜◼")
+        reply3 = await reply2.edit("<b>Loading ...</b>")
         await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("⬜⬜⬜⬜")
+        reply4 = await reply3.edit("<b>Loading ....</b>")
         await asyncio.sleep(0.5)
-        await reply4.edit(
+        reply5 = await reply4.edit("<b>Loading .....</b>")
+        await asyncio.sleep(0.5)
+        await reply5.edit(
             text=script.STATUS_TXT.format(total, users, chats, monsize, free),
             reply_markup=reply_markup,
             parse_mode='html'
