@@ -163,8 +163,9 @@ async def help(client, message):
             InlineKeyboardButton('PASTE', callback_data='pastes'),
             InlineKeyboardButton("IMAGE", callback_data='image')
             ],[
-            InlineKeyboardButton("NEXT ⏭", callback_data='help_2'),
-            InlineKeyboardButton('🏡 HOME 🏡', callback_data='start')
+            InlineKeyboardButton("NEXT ⏭", callback_data='help_2')
+            ],[
+            InlineKeyboardButton('🔐 CLOSE🔐', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
