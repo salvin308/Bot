@@ -141,7 +141,7 @@ Do as you wish with telegra.ph module!
 • This Command Is Available in goups and pms
 • This Command Can be used by everyone"""
 
-    PRIVATEBOT_TXT = """<b>Hello, I am Restarted. Now you can Search movies With Me</b>"""
+    PRIVATEBOT_TXT = """<b>꧁༒☬𝓗𝓮𝓵𝓵𝓸, 𝓘 𝓪𝓶 𝓡𝓮𝓼𝓽𝓪𝓻𝓽𝓮𝓭. 𝓝𝓸𝔀 𝔂𝓸𝓾 𝓬𝓪𝓷 𝓢𝓮𝓪𝓻𝓬𝓱 𝓶𝓸𝓿𝓲𝓮𝓼 𝓦𝓲𝓽𝓱 𝓜𝓮☬༒꧂</b>"""
 
     JSON_TXT ="""<b>JSON:</b>
 Bot returns json for all replied messages with /json
