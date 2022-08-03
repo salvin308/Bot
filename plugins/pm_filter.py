@@ -175,7 +175,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"★彡[{🄶🄴🅃_🅂🄸🅉🄴(🄵🄸🄻🄴.🄵🄸🄻🄴_🅂🄸🅉🄴)}]彡★ ➟ {file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"★彡[{get_size(file.file_size)}]彡★ ╰┈➤ {file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -184,10 +184,10 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"➟ {file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"╰┈➤ {file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
                 InlineKeyboardButton(
-                    text=f"[{🄶🄴🅃_🅂🄸🅉🄴(🄵🄸🄻🄴.🄵🄸🄻🄴_🅂🄸🅉🄴)}]",
+                    text=f"★彡[{get_size(file.file_size)}]彡★",
                     callback_data=f'files_#{file.file_id}',
                 ),
             ]
@@ -1756,7 +1756,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[🔰{get_size(file.file_size)}🔰] ➟ {file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"★彡[{get_size(file.file_size)}]彡★ ╰┈➤ {file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -1765,11 +1765,11 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"➟ {file.file_name}",
+                    text=f"╰┈➤ {file.file_name}",
                     callback_data=f'{pre}#{file.file_id}',
                 ),
                 InlineKeyboardButton(
-                    text=f"[🔰{get_size(file.file_size)}🔰]",
+                    text=f"★彡[{get_size(file.file_size)}]彡★",
                     callback_data=f'files_#{file.file_id}',
                 ),
             ]
