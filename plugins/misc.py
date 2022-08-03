@@ -167,7 +167,7 @@ async def help(client, msg):
             InlineKeyboardButton('🏡 HOME 🏡', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await msg.edit("<b>LOADING ▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱ 0%</b>")
+        reply1 = await msg.message.edit("<b>LOADING ▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱ 0%</b>")
         await asyncio.sleep(0.2)
         reply2 = await reply1.edit("<b>LOADING ▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱ 25%</b>")
         await asyncio.sleep(0.5)
