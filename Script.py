@@ -30,7 +30,7 @@ HERE IS THE ALL FEATURES.</b>
 ✮ URL Shorter
 ✮ File to Link
 ✮ Image Editor"""
-    ABOUT_TXT = """<b>✮ MY NAME: {}
+    ABOUT_TXT = """<b>✮ MY NAME: <a href=https://t.me/Spider_man_308_bot>Spidey</a>
 ✮ CREATOR: <a href=https://t.me/Salvin_308>SALVIN</a>
 ✮ LIBRARY: PYROGRAM
 ✮ LANGUAGE: PYTHON 3
