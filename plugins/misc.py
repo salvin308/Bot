@@ -166,7 +166,17 @@ async def help(client, message):
             InlineKeyboardButton('🏡 HOME 🏡', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_photo(
+        reply1 = await query.message.edit("<b>LOADING ▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱ 0%</b>")
+        await asyncio.sleep(0.2)
+        reply2 = await reply1.edit("<b>LOADING ▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱ 25%</b>")
+        await asyncio.sleep(0.5)
+        reply3 = await reply2.edit("<b>LOADING ▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱ 50%</b>")
+        await asyncio.sleep(0.5)
+        reply4 = await reply3.edit("<b>LOADING ▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱ 75%</b>")
+        await asynico.sleep(0.5)
+        reply5 = await reply4.edit("<b>LOADING ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ 100%</b>")
+        await asynico.sleep(0.2)
+        await reply5.edit(
             photo=random.choice(PICS),
             caption=script.HELP_TXT.format(message.from_user.mention),
             reply_markup=reply_markup,
