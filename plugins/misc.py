@@ -149,7 +149,7 @@ async def who_is(client, message):
     await status_message.delete()
 
 @Client.on_message(filters.command("help"))
-async def help(client, msg):
+async def help(client, message):
         buttons = [[
             InlineKeyboardButton('MANUAL FILTER', callback_data='manuelfilter'),
             InlineKeyboardButton('AUTO FILTER', callback_data='autofilter'),
@@ -167,17 +167,7 @@ async def help(client, msg):
             InlineKeyboardButton('🏡 HOME 🏡', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        reply1 = await msg.message.edit("<b>LOADING ▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱ 0%</b>")
-        await asyncio.sleep(0.2)
-        reply2 = await reply1.edit("<b>LOADING ▰▰▰▰▱▱▱▱▱▱▱▱▱▱▱▱ 25%</b>")
-        await asyncio.sleep(0.5)
-        reply3 = await reply2.edit("<b>LOADING ▰▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱ 50%</b>")
-        await asyncio.sleep(0.5)
-        reply4 = await reply3.edit("<b>LOADING ▰▰▰▰▰▰▰▰▰▰▰▰▱▱▱▱ 75%</b>")
-        await asynico.sleep(0.5)
-        reply5 = await reply4.edit("<b>LOADING ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ 100%</b>")
-        await asynico.sleep(0.2)
-        await reply5.edit(
+        await message.reply_photo(
             photo=random.choice(PICS),
             caption=script.HELP_TXT.format(message.from_user.mention),
             reply_markup=reply_markup,
