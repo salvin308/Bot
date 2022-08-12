@@ -29,7 +29,8 @@ HERE IS THE ALL FEATURES.</b>
 ✮ Text Message URL
 ✮ URL Shorter
 ✮ File to Link
-✮ Image Editor"""
+✮ Image Editor
+✮ Font Style"""
     ABOUT_TXT = """<b>✮ MY NAME: <a href=https://t.me/Spider_man_308_bot>Spidey</a>
 ✮ CREATOR: <a href=https://t.me/Salvin_308>SALVIN</a>
 ✮ LIBRARY: PYROGRAM
