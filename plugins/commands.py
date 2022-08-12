@@ -568,7 +568,7 @@ async def style_buttons(c, m, cb=False):
         InlineKeyboardButton('🅂🅀🅄🄰🅁🄴🅂', callback_data='style+squares'),
         InlineKeyboardButton('🆂︎🆀︎🆄︎🅰︎🆁︎🅴︎🆂︎', callback_data='style+squares_bold')
         ],[
-        InlineKeyboardButton('ꪖꪀᦔꪖꪶꪊᥴ𝓲ꪖ', callback_data='style+andalucia')
+        InlineKeyboardButton('ꪖꪀᦔꪖꪶꪊᥴ𝓲ꪖ', callback_data='style+andalucia'),
         InlineKeyboardButton('爪卂几ᘜ卂', callback_data='style+manga'),
         InlineKeyboardButton('S̾t̾i̾n̾k̾y̾', callback_data='style+stinky')
         ],[
