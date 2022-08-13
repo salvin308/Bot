@@ -69,9 +69,9 @@ async def style_buttons(c, update, cb=False):
         await update.message.edit_reply_markup(InlineKeyboardMarkup(buttons))
 
 @Client.on_callback_query(filters.regex('^style'))
-async def style(c, m):
-    await m.answer()
-    cmd, style = m.data.split('+')
+async def stylishtext(bot, update, style):
+    await update.answer()
+    cmd, style = update.data.split('+')
 
     if style == 'typewriter':
         cls = Fonts.typewriter
@@ -152,8 +152,9 @@ async def style(c, m):
     if style == 'frozen':
         cls = Fonts.frozen
 
-    new_text = cls(m.message.reply_to_message.text)
+    r, text = update.message.reply_to_message.text.split(None, 1)
+    new_text = cls(text)
     try:
-        await m.message.edit_text(new_text, reply_markup=m.message.reply_markup)
+        await update.message.edit_text(new_text, reply_markup=update.message.reply_markup)
     except:
         pass
