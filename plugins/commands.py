@@ -593,12 +593,12 @@ async def style_buttons(c, m, cb=False):
     if not cb:
         await m.reply_text(m.text, reply_markup=InlineKeyboardMarkup(buttons), quote=True)
     else:
-        await m.answer()
-        await m.message.edit_reply_markup(InlineKeyboardMarkup(buttons))
-    else:
         await update.reply_text(text="""Enter Any Text like This 👇🏻
         
 Eg: <code>`/font ADMIN`</code>""")
+    if:
+        await m.answer()
+        await m.message.edit_reply_markup(InlineKeyboardMarkup(buttons))
 
 
 #@Client.on_callback_query(filters.regex('^style'))
