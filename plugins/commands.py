@@ -533,8 +533,8 @@ async def save_template(client, message):
     await sts.edit(f"SUCCESSFULLY UPGRADED YOUR TEMPLATE FOR {title}\n\n{template}")
     
     
-@Client.on_message(filters.private & filters.incoming & filters.text('fonts'))
-async def style_buttons(c, m, cb=False):
+@Client.on_message(filters.command("font"))
+async def style_buttons(bot, update, cb=False):
     buttons = [[
         InlineKeyboardButton('𝚃𝚢𝚙𝚎𝚠𝚛𝚒𝚝𝚎𝚛', callback_data='style+typewriter'),
         InlineKeyboardButton('𝕆𝕦𝕥𝕝𝕚𝕟𝕖', callback_data='style+outline'),
@@ -588,11 +588,13 @@ async def style_buttons(c, m, cb=False):
         InlineKeyboardButton('S̶t̶r̶i̶k̶e̶', callback_data='style+strike'),
         InlineKeyboardButton('F༙r༙o༙z༙e༙n༙', callback_data='style+frozen')
     ]]
-    if not cb:
-        await m.reply_text(m.text, reply_markup=InlineKeyboardMarkup(buttons), quote=True)
+    if ' ' in update.text:
+        title = update.text.split(" ", 1)[1]
+        await update.reply_text(title, reply_markup=InlineKeyboardMarkup(buttons))
     else:
-        await m.answer()
-        await m.message.edit_reply_markup(InlineKeyboardMarkup(buttons))
+        await update.reply_text(text="""Enter Any Text like This 👇🏻
+        
+Eg: <code>`/font ADMIN`</code>""")
 
 
 @Client.on_callback_query(filters.regex('^style'))
