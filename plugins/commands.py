@@ -532,7 +532,7 @@ async def save_template(client, message):
     await save_group_settings(grp_id, 'template', template)
     await sts.edit(f"SUCCESSFULLY UPGRADED YOUR TEMPLATE FOR {title}\n\n{template}")
     
-@Client.on_message(filters.private & filters.incoming & filters.text('fonts'))
+@Client.on_message(filters.private & filters.incoming & filters.text)
 async def style_buttons(c, m, cb=False):
     buttons = [[
         InlineKeyboardButton('𝚃𝚢𝚙𝚎𝚠𝚛𝚒𝚝𝚎𝚛', callback_data='style+typewriter'),
