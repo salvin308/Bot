@@ -5,7 +5,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQ
 
 
 @Client.on_message(filters.command("font"))
-async def style_buttons(c, m, cb=False):
+async def style_buttons(c, update, cb=False):
     buttons = [[
         InlineKeyboardButton('𝚃𝚢𝚙𝚎𝚠𝚛𝚒𝚝𝚎𝚛', callback_data='style+typewriter'),
         InlineKeyboardButton('𝕆𝕦𝕥𝕝𝕚𝕟𝕖', callback_data='style+outline'),
@@ -61,11 +61,11 @@ async def style_buttons(c, m, cb=False):
         ],[
         InlineKeyboardButton('🔐 CLOSE 🔐', callback_data='close_data')
     ]]
-    if not cb:
-        await m.reply_text(m.text, reply_markup=InlineKeyboardMarkup(buttons), quote=True)
+    if ' ' in update.text:
+        title = update.text.split(" ", 1)[1]
+        await update.reply_text(title, reply_markup=InlineKeyboardMarkup(buttons))
     else:
-        await m.answer()
-        await m.message.edit_reply_markup(InlineKeyboardMarkup(buttons))
+        await update.reply_text(text="Ente Any Text Eg `/font [text]`")
 
 @Client.on_callback_query(filters.regex('^style'))
 async def style(c, m):
