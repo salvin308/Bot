@@ -71,8 +71,7 @@ async def style_buttons(c, update, cb=False):
 @Client.on_callback_query(filters.regex('^style'))
 async def stylishtext(bot, update, style):
     await update.answer()
-    cmd, style = update.data.split('+')
-
+    
     if style == 'typewriter':
         cls = Fonts.typewriter
     if style == 'outline':
