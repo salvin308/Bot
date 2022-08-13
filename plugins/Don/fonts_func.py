@@ -325,7 +325,7 @@ class Fonts:
             'g': 'ɢ',
             'h': 'ʜ',
             'i': 'ɪ',
-            'j': 'ɪ',
+            'j': 'J',
             'k': 'ᴋ',
             'l': 'ʟ',
             'm': 'ᴍ',
@@ -334,7 +334,7 @@ class Fonts:
             'p': 'ᴘ',
             'q': 'ǫ',
             'r': 'ʀ',
-            's': 'ꜱ',
+            's': 's',
             't': 'ᴛ',
             'u': 'ᴜ',
             'v': 'ᴠ',
@@ -2360,3 +2360,4 @@ class Fonts:
         for i, j in style.items():
             text = text.replace(i, j)
         return text
+
