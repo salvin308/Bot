@@ -2,7 +2,7 @@ import os
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery 
 
-@Client.on_message(filters.command("font") filters.private & filters.incoming & filters.text)
+@Client.on_message(filters.command('font') filters.private & filters.incoming & filters.text)
 async def style_buttons(bot, update, cb=False):
     buttons = [[
         InlineKeyboardButton('𝚃𝚢𝚙𝚎𝚠𝚛𝚒𝚝𝚎𝚛', callback_data='style+typewriter'),
@@ -63,7 +63,7 @@ async def style_buttons(bot, update, cb=False):
     else:
         await update.reply_text(text="Ente Any Text Eg `/font [text]`")
 
-# @Client.on_callback_query(filters.regex('^style'))
+@Client.on_callback_query(filters.regex('^style'))
 async def stylishtext(bot, update, style):
     await update.answer()
 
