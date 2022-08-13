@@ -1,9 +1,10 @@
 import os
 from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery 
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
+
 
 @Client.on_message(filters.command("font"))
-async def style_buttons(bot, update, cb=False):
+async def style_buttons(c, m, cb=False):
     buttons = [[
         InlineKeyboardButton('𝚃𝚢𝚙𝚎𝚠𝚛𝚒𝚝𝚎𝚛', callback_data='style+typewriter'),
         InlineKeyboardButton('𝕆𝕦𝕥𝕝𝕚𝕟𝕖', callback_data='style+outline'),
@@ -66,8 +67,9 @@ async def style_buttons(bot, update, cb=False):
         await m.message.edit_reply_markup(InlineKeyboardMarkup(buttons))
 
 @Client.on_callback_query(filters.regex('^style'))
-async def stylishtext(bot, update, style):
-    await update.answer()
+async def style(c, m):
+    await m.answer()
+    cmd, style = m.data.split('+')
 
     if style == 'typewriter':
         cls = Fonts.typewriter
