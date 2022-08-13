@@ -3,7 +3,6 @@ import logging
 import random
 import asyncio
 from Script import script
-from .fonts import Fonts
 from pyrogram import Client, filters
 from pyrogram.errors import ChatAdminRequired, FloodWait
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery 
