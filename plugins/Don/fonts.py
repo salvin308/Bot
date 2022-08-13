@@ -65,7 +65,8 @@ async def style_buttons(c, update, cb=False):
         title = update.text.split(" ", 1)[1]
         await update.reply_text(title, reply_markup=InlineKeyboardMarkup(buttons))
     else:
-        await update.reply_text(text="Ente Any Text Eg `/font [text]`")
+        await update.answer()
+        await update.message.edit_reply_markup(InlineKeyboardMarkup(buttons))
 
 @Client.on_callback_query(filters.regex('^style'))
 async def style(c, m):
