@@ -2,7 +2,7 @@ import os
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery 
 
-@Client.on_message(filters.private & filters.incoming & filters.text)
+@Client.on_message(filters.command("font"))
 async def style_buttons(bot, update, cb=False):
     buttons = [[
         InlineKeyboardButton('𝚃𝚢𝚙𝚎𝚠𝚛𝚒𝚝𝚎𝚛', callback_data='style+typewriter'),
@@ -59,9 +59,11 @@ async def style_buttons(bot, update, cb=False):
         ],[
         InlineKeyboardButton('🔐 CLOSE 🔐', callback_data='close_data')
     ]]
-    if ' ' in update.text:
-        title = update.text.split(" ", 1)[1]
-        await update.reply_text(title, reply_markup=InlineKeyboardMarkup(buttons))
+    if not cb:
+        await m.reply_text(m.text, reply_markup=InlineKeyboardMarkup(buttons), quote=True)
+    else:
+        await m.answer()
+        await m.message.edit_reply_markup(InlineKeyboardMarkup(buttons))
 
 @Client.on_callback_query(filters.regex('^style'))
 async def stylishtext(bot, update, style):
@@ -146,9 +148,8 @@ async def stylishtext(bot, update, style):
     if style == 'frozen':
         cls = Fonts.frozen
 
-    r, text = update.message.reply_to_message.text.split(None, 1)
-    new_text = cls(text)
+    new_text = cls(m.message.reply_to_message.text)
     try:
-        await update.message.edit_text(new_text, reply_markup=update.message.reply_markup)
+        await m.message.edit_text(new_text, reply_markup=m.message.reply_markup)
     except:
         pass
