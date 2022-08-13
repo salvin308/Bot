@@ -56,12 +56,12 @@ async def style_buttons(bot, update, cb=False):
         InlineKeyboardButton('ዪሀክቿነ', callback_data='style+qvnes'),
         InlineKeyboardButton('S̶t̶r̶i̶k̶e̶', callback_data='style+strike'),
         InlineKeyboardButton('F༙r༙o༙z༙e༙n༙', callback_data='style+frozen')
-        ]]
+        ],[
+        InlineKeyboardButton('🔐 CLOSE 🔐', callback_data='close_data')
+    ]]
     if ' ' in update.text:
         title = update.text.split(" ", 1)[1]
         await update.reply_text(title, reply_markup=InlineKeyboardMarkup(buttons))
-    else:
-        await update.reply_text(text="Ente Any Text Eg `/font [text]`")
 
 @Client.on_callback_query(filters.regex('^style'))
 async def stylishtext(bot, update, style):
