@@ -599,7 +599,7 @@ async def style_buttons(bot, update, cb=False):
 Eg: <code>`/font ADMIN`</code>""")
 
 
-@Client.on_callback_query(filters.regex('^style'))
+#@Client.on_callback_query(filters.regex('^style'))
 async def stylishtext(bot, update, style):
     await update.answer()
 
