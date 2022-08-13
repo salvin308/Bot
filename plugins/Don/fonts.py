@@ -1,5 +1,5 @@
 import os
-from .fonts_func import Fonts
+from .fonts_func import Font
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 
