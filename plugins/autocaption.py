@@ -1,3 +1,4 @@
+from pyrogram import Client, filters
 import pyrogram, os, asyncio
 
 try: custom_caption = os.environ.get("custom_caption", "`{file_name}`")
