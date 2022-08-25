@@ -63,6 +63,9 @@ MAX_MESSAGE_LENGTH = 4096
 # This is required for the plugins involving the file system.
 TMP_DOWNLOAD_DIRECTORY = environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
 
+# Data base channel AutoCaption Option
+DATABASE_CHANNEL_FILE_CAPTION = os.environ.get("DATABASE_CHANNEL_FILE_CAPTION", "`{file_name}`")
+
 # the maximum number of 'selectable' messages in Telegram
 TG_MAX_SELECT_LEN = environ.get("TG_MAX_SELECT_LEN", "100")
 
